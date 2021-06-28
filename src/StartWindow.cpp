@@ -1,18 +1,12 @@
-﻿#include "PW-Manager.h"
+#include "StartWindow.h"
+#include "RegisterWindow.h"
+#include "LoginWindow.h"
 #include "ProgramInfo.h"
 
 
-void test()
+
+void showStartWindow(ftxui::ScreenInteractive screen)
 {
-	std::cout << "a\n";
-}
-
-
-int main(void)
-{
-	// The screen
-	auto screen = ftxui::ScreenInteractive::Fullscreen();
-
 
 #pragma region Components
 
@@ -34,14 +28,12 @@ int main(void)
 #pragma endregion
 
 
-	
-	
 
 
 	int x = 0;
 	ftxui::Component container = ftxui::Container::Vertical({ menu }, &x);
 	auto renderer = ftxui::Renderer(container, [&]
-	{
+		{
 			return
 				ftxui::vbox
 				(
@@ -63,9 +55,22 @@ int main(void)
 						menu->Render()
 					) | ftxui::border
 				);
-	});
+		});
 	screen.Loop(renderer);
 
-	std::cout << "Selected option = " << selected << std::endl;
-	return 0;
+
+
+	//Validate the users input
+	switch(selected)
+	{
+		case 0:
+			//showLoginWindow(screen);
+			break;
+		case 1:
+			//showRegisterWindow(screen);
+			break;
+		case 2:
+			std::cout << "Exit\n";
+			break;
+	}
 }

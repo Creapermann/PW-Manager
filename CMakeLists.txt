@@ -24,8 +24,9 @@ project ("PW-Manager"
   )
 
 # Add source to this project's executable.
-add_executable (PW-Manager "src/PW-Manager.cpp" "src/PW-Manager.h" "src/ProgramInfo.h")
+add_executable (PW-Manager   "src/ProgramInfo.h" "src/Main.cpp" "src/StartWindow.cpp" "src/StartWindow.h" "src/FtxuiIncludes.h" "src/LoginWindow.cpp" "src/LoginWindow.h" "src/RegisterWindow.h" "src/RegisterWindow.cpp")
 set_target_properties(PW-Manager PROPERTIES CXX_STANDARD 17)
+target_compile_features(PW-Manager PRIVATE cxx_std_17)
 
 target_include_directories(PW-Manager PRIVATE src)
 target_link_libraries(PW-Manager
