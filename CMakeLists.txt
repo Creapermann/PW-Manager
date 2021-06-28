@@ -24,7 +24,7 @@ project ("PW-Manager"
   )
 
 # Add source to this project's executable.
-add_executable (PW-Manager "src/PW-Manager.cpp" "src/PW-Manager.h")
+add_executable (PW-Manager "src/PW-Manager.cpp" "src/PW-Manager.h" "src/ProgramInfo.h")
 set_target_properties(PW-Manager PROPERTIES CXX_STANDARD 17)
 
 target_include_directories(PW-Manager PRIVATE src)
