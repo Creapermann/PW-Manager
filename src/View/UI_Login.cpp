@@ -1,9 +1,6 @@
 #include "UI_Login.h"
 #include "../ViewModel/Login.h"
 
-
-
-
 void showLoginWindow()
 {
 	Login login;
@@ -13,18 +10,18 @@ void showLoginWindow()
 
 
 	// Components
-	auto menuButton = ftxui::Button("<< Back to menu", showStartWindow, false);
+	auto menuButton = ftxui::Button(" <<  Back to menu", showStartWindow, true);
 	auto loginButton = ftxui::Button("Login", [&] {login.loginButtonClick(login.email, login.password); }, true);
 
-	ftxui::Component emailInputBox = ftxui::Input(&login.email, "someone@example.com");
-	ftxui::Component passwordInputBox = ftxui::Input(&login.password, "********");
+	ftxui::Component emailInput = ftxui::Input(&login.email, "someone@example.com");
+	ftxui::Component passwordInput = ftxui::Input(&login.password, "********");
 
 
 	// Container
 	auto container = ftxui::Container::Vertical(
 		{
-			emailInputBox,
-			passwordInputBox,
+			emailInput,
+			passwordInput,
 			loginButton,
 			menuButton,
 
@@ -40,7 +37,7 @@ void showLoginWindow()
 						// Title
 						ftxui::hbox
 						(
-							ftxui::text(L"Master Login") | ftxui::flex | ftxui::center | ftxui::color(ftxui::Color::Green)
+							ftxui::text(L"Login") | ftxui::flex | ftxui::center | ftxui::color(ftxui::Color::Green)
 						) | ftxui::border
 
 					),
@@ -52,13 +49,13 @@ void showLoginWindow()
 						ftxui::hbox
 						(
 							ftxui::text(L"Email:     "),
-							emailInputBox->Render()
+							emailInput->Render()
 						) | ftxui::border | ftxui::color(ftxui::Color::White),
 
 						ftxui::hbox
 						(
 							ftxui::text(L"Password:  "),
-							passwordInputBox->Render() | ftxui::color(ftxui::Color::Black)
+							passwordInput->Render() | ftxui::color(ftxui::Color::Black)
 						) | ftxui::border | ftxui::color(ftxui::Color::White),
 						ftxui::hbox(
 							loginButton->Render()

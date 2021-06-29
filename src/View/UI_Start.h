@@ -2,5 +2,4 @@
 
 #include "../Model/FtxuiIncludes.h"
 
-
 void showStartWindow();

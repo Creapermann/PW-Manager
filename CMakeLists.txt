@@ -31,8 +31,13 @@ add_executable (PW-Manager  "src/Model/ProgramInfo.h"
 							"src/Model/FtxuiIncludes.h" 
 							"src/View/UI_Login.cpp" 
 							"src/View/UI_Login.h" 
-							"src/View/UI_Register.h" 
-							"src/View/UI_Register.cpp" "src/ViewModel/Login.cpp" "src/ViewModel/Login.h"   "lib/pwstring.cpp")
+							"src/View/UI_Signup.h" 
+							"src/View/UI_Signup.cpp" 
+							"src/ViewModel/Login.cpp" 
+							"src/ViewModel/Login.h"   
+							"lib/pwstring.cpp" 
+							"src/ViewModel/Signup.cpp" 
+							"src/ViewModel/Signup.h")
 
 set_target_properties(PW-Manager PROPERTIES CXX_STANDARD 17)
 target_compile_features(PW-Manager PRIVATE cxx_std_17)
