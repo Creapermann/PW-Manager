@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 
 #include <ftxui/dom/elements.hpp>
 #include <ftxui/screen/screen.hpp>

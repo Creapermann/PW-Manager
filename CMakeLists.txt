@@ -32,7 +32,7 @@ add_executable (PW-Manager  "src/Model/ProgramInfo.h"
 							"src/View/UI_Login.cpp" 
 							"src/View/UI_Login.h" 
 							"src/View/UI_Register.h" 
-							"src/View/UI_Register.cpp" "src/ViewModel/Login.cpp" "src/ViewModel/Login.h")
+							"src/View/UI_Register.cpp" "src/ViewModel/Login.cpp" "src/ViewModel/Login.h"  )
 
 set_target_properties(PW-Manager PROPERTIES CXX_STANDARD 17)
 target_compile_features(PW-Manager PRIVATE cxx_std_17)

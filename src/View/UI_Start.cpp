@@ -4,7 +4,6 @@
 #include "../Model/ProgramInfo.h"
 
 
-
 void showStartWindow()
 {
 
@@ -32,8 +31,7 @@ void showStartWindow()
 
 
 
-	int x = 0;
-	ftxui::Component container = ftxui::Container::Vertical({ menu }, &x);
+	ftxui::Component container = ftxui::Container::Vertical({ menu });
 	auto renderer = ftxui::Renderer(container, [&]
 		{
 			return
