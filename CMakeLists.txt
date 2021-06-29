@@ -3,6 +3,11 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
+project ("PW-Manager"
+  LANGUAGES CXX
+  VERSION 0.1.0
+  )
+
 # --- Fetch FTXUI --------------------------------------------------------------
 include(FetchContent)
 
@@ -18,10 +23,6 @@ if(NOT ftxui_POPULATED)
 endif()
 # ------------------------------------------------------------------------------
 
-project ("PW-Manager"
-  LANGUAGES CXX
-  VERSION 0.1.0
-  )
 
 # Add source to this project's executable.
 add_executable (PW-Manager  "src/Model/ProgramInfo.h"
@@ -43,9 +44,9 @@ set_target_properties(PW-Manager PROPERTIES CXX_STANDARD 17)
 target_compile_features(PW-Manager PRIVATE cxx_std_17)
 target_compile_options(PW-Manager PRIVATE $<$<CXX_COMPILER_ID:MSVC>:/Zc:__cplusplus>)
 
-target_include_directories(PW-Manager PRIVATE src)
+target_include_directories(PW-Manager PRIVATE src/ lib/)
 target_link_libraries(PW-Manager
   PRIVATE ftxui::screen
   PRIVATE ftxui::dom
   PRIVATE ftxui::component
-)
+  )
