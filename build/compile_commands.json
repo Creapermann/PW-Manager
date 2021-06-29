@@ -1,0 +1,482 @@
+[
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I../src -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o CMakeFiles\\PW-Manager.dir\\src\\Main.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\src\\Main.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/src/Main.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I../src -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o CMakeFiles\\PW-Manager.dir\\src\\StartWindow.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\src\\StartWindow.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/src/StartWindow.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I../src -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o CMakeFiles\\PW-Manager.dir\\src\\LoginWindow.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\src\\LoginWindow.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/src/LoginWindow.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I../src -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o CMakeFiles\\PW-Manager.dir\\src\\RegisterWindow.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\src\\RegisterWindow.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/src/RegisterWindow.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\screen.dir\\src\\ftxui\\screen\\box.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\screen\\box.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/screen/box.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\screen.dir\\src\\ftxui\\screen\\color.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\screen\\color.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/screen/color.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\screen.dir\\src\\ftxui\\screen\\color_info.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\screen\\color_info.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/screen/color_info.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\screen.dir\\src\\ftxui\\screen\\screen.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\screen\\screen.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/screen/screen.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\screen.dir\\src\\ftxui\\screen\\string.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\screen\\string.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/screen/string.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\screen.dir\\src\\ftxui\\screen\\terminal.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\screen\\terminal.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/screen/terminal.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\screen.dir\\src\\ftxui\\screen\\wcwidth.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\screen\\wcwidth.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/screen/wcwidth.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\blink.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\blink.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/blink.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\bold.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\bold.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/bold.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\border.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\border.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/border.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\clear_under.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\clear_under.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/clear_under.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\color.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\color.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/color.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\composite_decorator.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\composite_decorator.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/composite_decorator.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\dbox.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\dbox.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/dbox.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\dim.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\dim.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/dim.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\flex.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\flex.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/flex.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\frame.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\frame.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/frame.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\gauge.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\gauge.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/gauge.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\graph.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\graph.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/graph.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\hbox.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\hbox.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/hbox.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\hflow.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\hflow.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/hflow.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\inverted.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\inverted.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/inverted.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\node.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\node.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/node.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\node_decorator.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\node_decorator.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/node_decorator.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\paragraph.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\paragraph.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/paragraph.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\reflect.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\reflect.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/reflect.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\separator.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\separator.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/separator.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\size.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\size.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/size.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\spinner.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\spinner.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/spinner.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\text.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\text.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/text.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\underlined.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\underlined.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/underlined.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\util.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\util.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/util.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\dom.dir\\src\\ftxui\\dom\\vbox.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\dom\\vbox.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/dom/vbox.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\component.dir\\src\\ftxui\\component\\button.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\component\\button.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/component/button.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\component.dir\\src\\ftxui\\component\\catch_event.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\component\\catch_event.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/component/catch_event.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\component.dir\\src\\ftxui\\component\\checkbox.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\component\\checkbox.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/component/checkbox.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\component.dir\\src\\ftxui\\component\\component.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\component\\component.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/component/component.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\component.dir\\src\\ftxui\\component\\container.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\component\\container.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/component/container.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\component.dir\\src\\ftxui\\component\\event.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\component\\event.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/component/event.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\component.dir\\src\\ftxui\\component\\input.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\component\\input.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/component/input.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\component.dir\\src\\ftxui\\component\\menu.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\component\\menu.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/component/menu.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\component.dir\\src\\ftxui\\component\\radiobox.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\component\\radiobox.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/component/radiobox.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\component.dir\\src\\ftxui\\component\\renderer.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\component\\renderer.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/component/renderer.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\component.dir\\src\\ftxui\\component\\resizable_split.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\component\\resizable_split.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/component/resizable_split.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\component.dir\\src\\ftxui\\component\\screen_interactive.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\component\\screen_interactive.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/component/screen_interactive.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\component.dir\\src\\ftxui\\component\\slider.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\component\\slider.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/component/slider.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\component.dir\\src\\ftxui\\component\\terminal_input_parser.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\component\\terminal_input_parser.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/component/terminal_input_parser.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -DUNICODE -D_UNICODE -I_deps/ftxui-src/include -I_deps/ftxui-src/src -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\CMakeFiles\\component.dir\\src\\ftxui\\component\\toggle.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\src\\ftxui\\component\\toggle.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/src/ftxui/component/toggle.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\component\\CMakeFiles\\button.dir\\button.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\component\\button.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/component/button.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\component\\CMakeFiles\\menu2.dir\\menu2.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\component\\menu2.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/component/menu2.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\component\\CMakeFiles\\checkbox.dir\\checkbox.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\component\\checkbox.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/component/checkbox.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\component\\CMakeFiles\\checkbox_in_frame.dir\\checkbox_in_frame.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\component\\checkbox_in_frame.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/component/checkbox_in_frame.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\component\\CMakeFiles\\gallery.dir\\gallery.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\component\\gallery.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/component/gallery.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\component\\CMakeFiles\\menu.dir\\menu.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\component\\menu.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/component/menu.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\component\\CMakeFiles\\homescreen.dir\\homescreen.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\component\\homescreen.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/component/homescreen.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\component\\CMakeFiles\\input.dir\\input.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\component\\input.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/component/input.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\component\\CMakeFiles\\menu_multiple.dir\\menu_multiple.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\component\\menu_multiple.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/component/menu_multiple.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\component\\CMakeFiles\\slider_rgb.dir\\slider_rgb.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\component\\slider_rgb.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/component/slider_rgb.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\component\\CMakeFiles\\menu_style.dir\\menu_style.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\component\\menu_style.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/component/menu_style.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\component\\CMakeFiles\\modal_dialog.dir\\modal_dialog.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\component\\modal_dialog.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/component/modal_dialog.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\component\\CMakeFiles\\radiobox.dir\\radiobox.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\component\\radiobox.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/component/radiobox.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\component\\CMakeFiles\\radiobox_in_frame.dir\\radiobox_in_frame.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\component\\radiobox_in_frame.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/component/radiobox_in_frame.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\component\\CMakeFiles\\slider.dir\\slider.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\component\\slider.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/component/slider.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\component\\CMakeFiles\\tab_horizontal.dir\\tab_horizontal.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\component\\tab_horizontal.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/component/tab_horizontal.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\component\\CMakeFiles\\tab_vertical.dir\\tab_vertical.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\component\\tab_vertical.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/component/tab_vertical.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\component\\CMakeFiles\\resizable_split.dir\\resizable_split.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\component\\resizable_split.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/component/resizable_split.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\component\\CMakeFiles\\toggle.dir\\toggle.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\component\\toggle.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/component/toggle.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\graph.dir\\graph.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\graph.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/graph.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\border.dir\\border.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\border.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/border.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\window.dir\\window.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\window.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/window.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\color_gallery.dir\\color_gallery.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\color_gallery.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/color_gallery.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\dbox.dir\\dbox.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\dbox.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/dbox.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\gauge.dir\\gauge.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\gauge.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/gauge.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\hflow.dir\\hflow.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\hflow.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/hflow.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\package_manager.dir\\package_manager.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\package_manager.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/package_manager.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\color_info_palette256.dir\\color_info_palette256.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\color_info_palette256.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/color_info_palette256.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\html_like.dir\\html_like.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\html_like.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/html_like.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\paragraph.dir\\paragraph.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\paragraph.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/paragraph.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\color_truecolor_RGB.dir\\color_truecolor_RGB.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\color_truecolor_RGB.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/color_truecolor_RGB.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\separator.dir\\separator.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\separator.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/separator.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\size.dir\\size.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\size.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/size.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\vbox_hbox.dir\\vbox_hbox.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\vbox_hbox.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/vbox_hbox.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\spinner.dir\\spinner.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\spinner.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/spinner.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\style_blink.dir\\style_blink.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\style_blink.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/style_blink.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\style_bold.dir\\style_bold.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\style_bold.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/style_bold.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\style_inverted.dir\\style_inverted.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\style_inverted.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/style_inverted.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\style_color.dir\\style_color.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\style_color.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/style_color.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\color_truecolor_HSV.dir\\color_truecolor_HSV.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\color_truecolor_HSV.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/color_truecolor_HSV.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\style_dim.dir\\style_dim.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\style_dim.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/style_dim.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\style_gallery.dir\\style_gallery.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\style_gallery.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/style_gallery.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\dom\\CMakeFiles\\style_underlined.dir\\style_underlined.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\dom\\style_underlined.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/dom/style_underlined.cpp"
+},
+{
+  "directory": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\Llvm\\bin\\clang.exe -I_deps/ftxui-src/include -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=gnu++17 -o _deps\\ftxui-build\\examples\\util\\CMakeFiles\\print_key_press.dir\\print_key_press.cpp.obj -c C:\\Users\\Creap\\Data\\Programming\\C++\\Projects\\PW-Manager\\build\\_deps\\ftxui-src\\examples\\util\\print_key_press.cpp",
+  "file": "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build/_deps/ftxui-src/examples/util/print_key_press.cpp"
+}
+]

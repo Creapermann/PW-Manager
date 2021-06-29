@@ -1,0 +1,10 @@
+# ninja log v5
+1	162	6466174603816978	ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-mkdir	fe930be26ec190b0
+2506	2556	6466174627755925	ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-build	91514d051a7f5c10
+162	2409	6466174626284324	ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-download	48bc5aeb45c0065b
+2409	2459	6466174626792968	ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-patch	a5bc76d4b7526a09
+2556	2602	6466174628220941	ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-install	3468c5ecb76ad30b
+2459	2506	6466174627251737	ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-configure	6d24a0ff1e9a9265
+2605	2651	6466174628699652	ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-test	fbac5eba54c0a5b9
+2651	2720	6466174629367865	CMakeFiles/ftxui-populate-complete	d84947361b314836
+2651	2720	6466174629367865	ftxui-populate-prefix/src/ftxui-populate-stamp/ftxui-populate-done	d84947361b314836

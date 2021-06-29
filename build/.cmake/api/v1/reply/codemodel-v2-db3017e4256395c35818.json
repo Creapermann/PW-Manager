@@ -1,0 +1,591 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "_deps/ftxui-build",
+					"childIndexes" : 
+					[
+						2,
+						6
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.11"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "build/_deps/ftxui-src",
+					"targetIndexes" : 
+					[
+						9,
+						11,
+						30
+					]
+				},
+				{
+					"build" : "_deps/ftxui-build/examples",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.11"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/ftxui-src/examples"
+				},
+				{
+					"build" : "_deps/ftxui-build/examples/component",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.11"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "build/_deps/ftxui-src/examples/component",
+					"targetIndexes" : 
+					[
+						2,
+						3,
+						4,
+						12,
+						16,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						27,
+						28,
+						29,
+						33,
+						34,
+						43,
+						44,
+						45
+					]
+				},
+				{
+					"build" : "_deps/ftxui-build/examples/dom",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.11"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "build/_deps/ftxui-src/examples/dom",
+					"targetIndexes" : 
+					[
+						1,
+						5,
+						6,
+						7,
+						8,
+						10,
+						13,
+						14,
+						15,
+						17,
+						24,
+						25,
+						31,
+						32,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						46,
+						47
+					]
+				},
+				{
+					"build" : "_deps/ftxui-build/examples/util",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.11"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "build/_deps/ftxui-src/examples/util",
+					"targetIndexes" : 
+					[
+						26
+					]
+				},
+				{
+					"build" : "_deps/ftxui-build/doc",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.11"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "build/_deps/ftxui-src/doc"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "PW-Manager",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"name" : "ftxui",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "PW-Manager::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PW-Manager-Debug-2c88da7aaef306145948.json",
+					"name" : "PW-Manager",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "border::@8bd270962809a3e028ba",
+					"jsonFile" : "target-border-Debug-c9e32f7357706e63fa79.json",
+					"name" : "border",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "button::@ae156dd4a86bb5e17491",
+					"jsonFile" : "target-button-Debug-79bc02aa96ccd1bb056d.json",
+					"name" : "button",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "checkbox::@ae156dd4a86bb5e17491",
+					"jsonFile" : "target-checkbox-Debug-2723f9711eaabae92283.json",
+					"name" : "checkbox",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "checkbox_in_frame::@ae156dd4a86bb5e17491",
+					"jsonFile" : "target-checkbox_in_frame-Debug-eda69188df6cbc297dca.json",
+					"name" : "checkbox_in_frame",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "color_gallery::@8bd270962809a3e028ba",
+					"jsonFile" : "target-color_gallery-Debug-03091381e292981f80ff.json",
+					"name" : "color_gallery",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "color_info_palette256::@8bd270962809a3e028ba",
+					"jsonFile" : "target-color_info_palette256-Debug-8ec32779e244173c65ff.json",
+					"name" : "color_info_palette256",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "color_truecolor_HSV::@8bd270962809a3e028ba",
+					"jsonFile" : "target-color_truecolor_HSV-Debug-690224e717dc81405897.json",
+					"name" : "color_truecolor_HSV",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "color_truecolor_RGB::@8bd270962809a3e028ba",
+					"jsonFile" : "target-color_truecolor_RGB-Debug-81191286960c3777fa46.json",
+					"name" : "color_truecolor_RGB",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "component::@b65f64d0ea8424dee96a",
+					"jsonFile" : "target-component-Debug-ef9736358a3abd97e5ec.json",
+					"name" : "component",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "dbox::@8bd270962809a3e028ba",
+					"jsonFile" : "target-dbox-Debug-48e16e1fc45b4aeee381.json",
+					"name" : "dbox",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "dom::@b65f64d0ea8424dee96a",
+					"jsonFile" : "target-dom-Debug-f27c9316ef3ec5bb8cf1.json",
+					"name" : "dom",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "gallery::@ae156dd4a86bb5e17491",
+					"jsonFile" : "target-gallery-Debug-7b5b63e2b35fd48c5c36.json",
+					"name" : "gallery",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "gauge::@8bd270962809a3e028ba",
+					"jsonFile" : "target-gauge-Debug-b4c1176f0875d9f0e7ee.json",
+					"name" : "gauge",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "graph::@8bd270962809a3e028ba",
+					"jsonFile" : "target-graph-Debug-06a496742a3ed3c5d2de.json",
+					"name" : "graph",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "hflow::@8bd270962809a3e028ba",
+					"jsonFile" : "target-hflow-Debug-71ad588aafba86b6f3ee.json",
+					"name" : "hflow",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "homescreen::@ae156dd4a86bb5e17491",
+					"jsonFile" : "target-homescreen-Debug-4e11c5c50c2c079e5a5b.json",
+					"name" : "homescreen",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "html_like::@8bd270962809a3e028ba",
+					"jsonFile" : "target-html_like-Debug-10b5054055caba8b7fbb.json",
+					"name" : "html_like",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "input::@ae156dd4a86bb5e17491",
+					"jsonFile" : "target-input-Debug-21b0fbfe160f38db1b6c.json",
+					"name" : "input",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "menu::@ae156dd4a86bb5e17491",
+					"jsonFile" : "target-menu-Debug-75d59a6b122845a65e30.json",
+					"name" : "menu",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "menu2::@ae156dd4a86bb5e17491",
+					"jsonFile" : "target-menu2-Debug-94b4eb757b023010ba66.json",
+					"name" : "menu2",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "menu_multiple::@ae156dd4a86bb5e17491",
+					"jsonFile" : "target-menu_multiple-Debug-9c7836fa3303e2ab5cf6.json",
+					"name" : "menu_multiple",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "menu_style::@ae156dd4a86bb5e17491",
+					"jsonFile" : "target-menu_style-Debug-de28c010174fc4e3ce6b.json",
+					"name" : "menu_style",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "modal_dialog::@ae156dd4a86bb5e17491",
+					"jsonFile" : "target-modal_dialog-Debug-ce2cb0da836fe379a585.json",
+					"name" : "modal_dialog",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "package_manager::@8bd270962809a3e028ba",
+					"jsonFile" : "target-package_manager-Debug-6969d4681d148af10395.json",
+					"name" : "package_manager",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "paragraph::@8bd270962809a3e028ba",
+					"jsonFile" : "target-paragraph-Debug-101da1469f1bc98587b9.json",
+					"name" : "paragraph",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "print_key_press::@45dd2ad8cb7fe04ac9a6",
+					"jsonFile" : "target-print_key_press-Debug-7aacb4668dd058c876f0.json",
+					"name" : "print_key_press",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "radiobox::@ae156dd4a86bb5e17491",
+					"jsonFile" : "target-radiobox-Debug-0f0d91a6beb48f77afe0.json",
+					"name" : "radiobox",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "radiobox_in_frame::@ae156dd4a86bb5e17491",
+					"jsonFile" : "target-radiobox_in_frame-Debug-50899cf13f376ba1b97b.json",
+					"name" : "radiobox_in_frame",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "resizable_split::@ae156dd4a86bb5e17491",
+					"jsonFile" : "target-resizable_split-Debug-ef35ae6a6dbf7e0e4586.json",
+					"name" : "resizable_split",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "screen::@b65f64d0ea8424dee96a",
+					"jsonFile" : "target-screen-Debug-3a83bcd253cb69163159.json",
+					"name" : "screen",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "separator::@8bd270962809a3e028ba",
+					"jsonFile" : "target-separator-Debug-188c93e8eb58020aa178.json",
+					"name" : "separator",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "size::@8bd270962809a3e028ba",
+					"jsonFile" : "target-size-Debug-f294391106cac9f0bacc.json",
+					"name" : "size",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "slider::@ae156dd4a86bb5e17491",
+					"jsonFile" : "target-slider-Debug-c64cd45384ad62143e00.json",
+					"name" : "slider",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "slider_rgb::@ae156dd4a86bb5e17491",
+					"jsonFile" : "target-slider_rgb-Debug-d40dd97d29ffc8bdb0b4.json",
+					"name" : "slider_rgb",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "spinner::@8bd270962809a3e028ba",
+					"jsonFile" : "target-spinner-Debug-093ff9c5b1cd01bbec9e.json",
+					"name" : "spinner",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "style_blink::@8bd270962809a3e028ba",
+					"jsonFile" : "target-style_blink-Debug-fe939c386e06d8b8b4d1.json",
+					"name" : "style_blink",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "style_bold::@8bd270962809a3e028ba",
+					"jsonFile" : "target-style_bold-Debug-e567528bbf97e620ca8c.json",
+					"name" : "style_bold",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "style_color::@8bd270962809a3e028ba",
+					"jsonFile" : "target-style_color-Debug-bd74885147867f47414e.json",
+					"name" : "style_color",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "style_dim::@8bd270962809a3e028ba",
+					"jsonFile" : "target-style_dim-Debug-09a2f7d4b390d029b307.json",
+					"name" : "style_dim",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "style_gallery::@8bd270962809a3e028ba",
+					"jsonFile" : "target-style_gallery-Debug-f5b57f08df233b51975a.json",
+					"name" : "style_gallery",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "style_inverted::@8bd270962809a3e028ba",
+					"jsonFile" : "target-style_inverted-Debug-ce6c73248c8c8b10bdf0.json",
+					"name" : "style_inverted",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "style_underlined::@8bd270962809a3e028ba",
+					"jsonFile" : "target-style_underlined-Debug-bf13c0a8bf0a86731314.json",
+					"name" : "style_underlined",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "tab_horizontal::@ae156dd4a86bb5e17491",
+					"jsonFile" : "target-tab_horizontal-Debug-5e88f6e538c0efa9b383.json",
+					"name" : "tab_horizontal",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "tab_vertical::@ae156dd4a86bb5e17491",
+					"jsonFile" : "target-tab_vertical-Debug-3d8025fc07866eaa05a5.json",
+					"name" : "tab_vertical",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "toggle::@ae156dd4a86bb5e17491",
+					"jsonFile" : "target-toggle-Debug-6120510d6c705ec3708b.json",
+					"name" : "toggle",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "vbox_hbox::@8bd270962809a3e028ba",
+					"jsonFile" : "target-vbox_hbox-Debug-bc6086a0c000748afa71.json",
+					"name" : "vbox_hbox",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "window::@8bd270962809a3e028ba",
+					"jsonFile" : "target-window-Debug-596e34115841f3a91c69.json",
+					"name" : "window",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager/build",
+		"source" : "C:/Users/Creap/Data/Programming/C++/Projects/PW-Manager"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}
