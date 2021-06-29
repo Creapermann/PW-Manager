@@ -4,6 +4,13 @@
 
 #include <iostream>
 
+class Login {
 
-void loginButtonClick(std::string email, std::string password);
-void menuButtonClick();
+public:
+	std::wstring email;
+	std::wstring password;
+
+public:
+	void loginButtonClick(std::wstring email, std::wstring password);
+	void menuButtonClick();
+};

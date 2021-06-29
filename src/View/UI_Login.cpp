@@ -6,16 +6,18 @@
 
 void showLoginWindow()
 {
+	Login login;
+
 	// Screen
 	auto screen = ftxui::ScreenInteractive::Fullscreen();
 
 
 	// Components
 	auto menuButton = ftxui::Button("<< Back to menu", showStartWindow, false);
-	auto loginButton = ftxui::Button("Login", showStartWindow, true);
+	auto loginButton = ftxui::Button("Login", [&] {login.loginButtonClick(login.email, login.password); }, true);
 
-	ftxui::Component emailInputBox = ftxui::Input(&email, "someone@example.com");
-	ftxui::Component passwordInputBox = ftxui::Input(&password, "********");
+	ftxui::Component emailInputBox = ftxui::Input(&login.email, "someone@example.com");
+	ftxui::Component passwordInputBox = ftxui::Input(&login.password, "********");
 
 
 	// Container
@@ -56,7 +58,7 @@ void showLoginWindow()
 						ftxui::hbox
 						(
 							ftxui::text(L"Password:  "),
-							passwordInputBox->Render()
+							passwordInputBox->Render() | ftxui::color(ftxui::Color::Black)
 						) | ftxui::border | ftxui::color(ftxui::Color::White),
 						ftxui::hbox(
 							loginButton->Render()

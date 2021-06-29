@@ -3,11 +3,12 @@
 
 
 
-void loginButtonClick(std::string email, std::string password)
+void Login::loginButtonClick(std::wstring email, std::wstring password)
 {
+
 }
 
-void menuButtonClick() 
+void Login::menuButtonClick()
 {
 	showStartWindow();
 }
