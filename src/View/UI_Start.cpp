@@ -1,12 +1,14 @@
-#include "StartWindow.h"
-#include "RegisterWindow.h"
-#include "LoginWindow.h"
-#include "ProgramInfo.h"
+#include "UI_Start.h"
+#include "UI_Register.h"
+#include "UI_Login.h"
+#include "../Model/ProgramInfo.h"
 
 
 
-void showStartWindow(ftxui::ScreenInteractive screen)
+void showStartWindow()
 {
+
+	auto screen = ftxui::ScreenInteractive::Fullscreen();
 
 #pragma region Components
 
@@ -61,16 +63,16 @@ void showStartWindow(ftxui::ScreenInteractive screen)
 
 
 	//Validate the users input
-	switch(selected)
+	switch (selected)
 	{
-		case 0:
-			//showLoginWindow(screen);
-			break;
-		case 1:
-			//showRegisterWindow(screen);
-			break;
-		case 2:
-			std::cout << "Exit\n";
-			break;
+	case 0:
+		showLoginWindow();
+		break;
+	case 1:
+		showRegisterWindow();
+		break;
+	case 2:
+		std::cout << "Exit\n";
+		break;
 	}
 }

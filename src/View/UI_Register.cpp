@@ -1,8 +1,9 @@
-#include "RegisterWindow.h"
-#include "ProgramInfo.h"
+#include "UI_Register.h"
+#include "../Model/ProgramInfo.h"
 
-void showRegisterWindow(ftxui::ScreenInteractive screen)
+void showRegisterWindow() //i 
 {
+	auto screen = ftxui::ScreenInteractive::Fullscreen();
 	auto renderer = ftxui::Renderer([&]
 		{
 			return

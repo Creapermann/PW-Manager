@@ -20,11 +20,20 @@ endif()
 
 project ("PW-Manager"
   LANGUAGES CXX
-  VERSION 1.0.0
+  VERSION 0.1.0
   )
 
 # Add source to this project's executable.
-add_executable (PW-Manager   "src/ProgramInfo.h" "src/Main.cpp" "src/StartWindow.cpp" "src/StartWindow.h" "src/FtxuiIncludes.h" "src/LoginWindow.cpp" "src/LoginWindow.h" "src/RegisterWindow.h" "src/RegisterWindow.cpp")
+add_executable (PW-Manager  "src/Model/ProgramInfo.h"
+							"src/Main.cpp"
+							"src/View/UI_Start.cpp"
+							"src/View/UI_Start.h" 
+							"src/Model/FtxuiIncludes.h" 
+							"src/View/UI_Login.cpp" 
+							"src/View/UI_Login.h" 
+							"src/View/UI_Register.h" 
+							"src/View/UI_Register.cpp" "src/ViewModel/Login.cpp" "src/ViewModel/Login.h")
+
 set_target_properties(PW-Manager PROPERTIES CXX_STANDARD 17)
 target_compile_features(PW-Manager PRIVATE cxx_std_17)
 target_compile_options(PW-Manager PRIVATE $<$<CXX_COMPILER_ID:MSVC>:/Zc:__cplusplus>)
