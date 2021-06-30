@@ -36,7 +36,7 @@ void showCreditsWindow()
 			return
 				ftxui::vbox
 				(
-					// Programm info
+					// Header
 					ftxui::hbox
 					(
 						// Title
@@ -50,7 +50,7 @@ void showCreditsWindow()
 
 					//Spacing
 					ftxui::hbox() | ftxui::size(ftxui::HEIGHT, ftxui::GREATER_THAN, 2),
-
+					
 
 					// Developers
 					ftxui::vbox
@@ -64,6 +64,7 @@ void showCreditsWindow()
 
 							ftxui::vbox
 							(
+
 								// Spacing
 								ftxui::hbox() | ftxui::size(ftxui::HEIGHT, ftxui::GREATER_THAN, 1),
 
@@ -73,6 +74,8 @@ void showCreditsWindow()
 									dev1Split->Render() | ftxui::center
 
 								) | ftxui::border | ftxui::color(ftxui::Color::White),
+
+
 
 								// Spacing
 								ftxui::hbox() | ftxui::size(ftxui::HEIGHT, ftxui::GREATER_THAN, 1),
@@ -91,6 +94,7 @@ void showCreditsWindow()
 
 					// Spacing
 					ftxui::hbox() | ftxui::size(ftxui::HEIGHT, ftxui::GREATER_THAN, 4),
+
 
 					// Program information
 					ftxui::vbox
@@ -117,6 +121,10 @@ void showCreditsWindow()
 					) | ftxui::color(ftxui::Color::GrayDark),
 
 
+					// Spacing
+					ftxui::hbox() | ftxui::size(ftxui::HEIGHT, ftxui::GREATER_THAN, 1),
+
+					// Menu button
 					ftxui::vbox
 					(
 						menuButton->Render() | ftxui::size(ftxui::WIDTH, ftxui::LESS_THAN, 8)
