@@ -2,6 +2,8 @@
 #include "../Model/ProgramInfo.h"
 #include "UI_Login.h"
 #include "UI_Signup.h"
+#include "UI_Credits.h"
+
 
 void showStartWindow() {
 
@@ -9,7 +11,7 @@ void showStartWindow() {
 
 
     // Components
-    auto creditsButton = ftxui::Button(" credits ", [&] {; }, false);
+    auto creditsButton = ftxui::Button(" credits ", [&] { showCreditsWindow(); }, false);
 
 
     // Menu
@@ -76,7 +78,7 @@ void showStartWindow() {
         showSignupWindow();
         break;
     case 2:
-        exit(1);  //Close the program
+        exit(1);
         break;
     }
 }
