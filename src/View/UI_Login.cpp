@@ -1,12 +1,13 @@
 #include "UI_Login.h"
 #include "../ViewModel/Login.h"
 
+
+extern ftxui::ScreenInteractive screen;
+
+
 void showLoginWindow()
 {
 	Login login;
-
-	// Screen
-	auto screen = ftxui::ScreenInteractive::Fullscreen();
 
 
 	// Components

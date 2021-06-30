@@ -4,28 +4,36 @@
 #include "UI_Signup.h"
 #include "UI_Credits.h"
 
+extern ftxui::ScreenInteractive screen;
 
 void showStartWindow() {
 
-    auto screen = ftxui::ScreenInteractive::Fullscreen();
-
-
     // Components
     auto creditsButton = ftxui::Button(" credits ", [&] { showCreditsWindow(); }, false);
-
 
     // Menu
     std::vector<std::wstring> entries = {
         L"Login",
         L"Create New Account",
-        L"Exit",
+        L"Exit"
     };
     // Selected item
     int selected = 0;
     // Menu
     auto menu = ftxui::Menu(&entries, &selected);
     // Addaptions
-    ftxui::MenuBase::From(menu)->on_enter = screen.ExitLoopClosure();
+    ftxui::MenuBase::From(menu)->on_enter = [&]{    
+        switch (selected) {
+        case 0:
+            showLoginWindow();
+            break;
+        case 1:
+            showSignupWindow();
+            break;
+        case 2:
+            screen.ExitLoopClosure();
+            break;
+        }};
     ftxui::MenuBase::From(menu)->focused_style = ftxui::bgcolor(ftxui::Color::Blue);
 
 
@@ -68,17 +76,4 @@ void showStartWindow() {
 
         });
     screen.Loop(renderer);
-
-    // Validate the users input
-    switch (selected) {
-    case 0:
-        showLoginWindow();
-        break;
-    case 1:
-        showSignupWindow();
-        break;
-    case 2:
-        exit(1);
-        break;
-    }
 }
