@@ -5,63 +5,78 @@
 
 void showStartWindow() {
 
-  auto screen = ftxui::ScreenInteractive::Fullscreen();
+    auto screen = ftxui::ScreenInteractive::Fullscreen();
 
-#pragma region Components
 
-  /*Menu*/
-  // Menu items
-  std::vector<std::wstring> entries = {
-      L"Login",
-      L"Create New Account",
-      L"Exit",
-  };
-  // Selected item
-  int selected = 0;
-  // Menu
-  auto menu = ftxui::Menu(&entries, &selected);
-  // Addaptions
-  ftxui::MenuBase::From(menu)->on_enter = screen.ExitLoopClosure();
-  ftxui::MenuBase::From(menu)->focused_style =
-      ftxui::bgcolor(ftxui::Color::Blue);
+    // Components
+    auto creditsButton = ftxui::Button(" credits ", [&] {; }, false);
 
-#pragma endregion
 
-  ftxui::Component container = ftxui::Container::Vertical({menu});
-  auto renderer = ftxui::Renderer(container, [&] {
-    return ftxui::vbox(
-        ftxui::hbox(
-            // Title
-            ftxui::text(std::wstring(pInfo::name.begin(), pInfo::name.end())) |
+    // Menu
+    std::vector<std::wstring> entries = {
+        L"Login",
+        L"Create New Account",
+        L"Exit",
+    };
+    // Selected item
+    int selected = 0;
+    // Menu
+    auto menu = ftxui::Menu(&entries, &selected);
+    // Addaptions
+    ftxui::MenuBase::From(menu)->on_enter = screen.ExitLoopClosure();
+    ftxui::MenuBase::From(menu)->focused_style = ftxui::bgcolor(ftxui::Color::Blue);
+
+
+
+
+    // Container
+    ftxui::Component container = ftxui::Container::Vertical(
+        {
+            menu,
+            creditsButton
+        });
+
+    auto renderer = ftxui::Renderer(container, [&] {
+        return ftxui::vbox(
+            ftxui::hbox(
+                // Title
+                ftxui::text(std::wstring(pInfo::name.begin(), pInfo::name.end())) |
                 ftxui::flex | ftxui::bold | ftxui::color(ftxui::Color::Green) | ftxui::center,
 
-            // Version
-            ftxui::text(L"v_" + std::wstring(pInfo::version.begin(),
-                                             pInfo::version.end()))
+                // Version
+                ftxui::text(L"v_" + std::wstring(pInfo::version.begin(), pInfo::version.end()))
 
-                ) |
-            ftxui::border,
+            ) | ftxui::border,
 
-        // Seperator
-        ftxui::separator(),
+            // Seperator
+            ftxui::separator() | ftxui::color(ftxui::Color::GrayDark),
 
-        ftxui::vbox(
             // Menu
-            menu->Render()) |
-            ftxui::border);
-  });
-  screen.Loop(renderer);
+            ftxui::vbox(
+                menu->Render() | ftxui::border
+            ) | ftxui::size(ftxui::HEIGHT, ftxui::GREATER_THAN, 6),
 
-  // Validate the users input
-  switch (selected) {
-  case 0:
-    showLoginWindow();
-    break;
-  case 1:
-    showSignupWindow();
-    break;
-  case 2:
-    std::cout << "Exit\n";
-    break;
-  }
+            ftxui::vbox
+            (
+                creditsButton->Render() | ftxui::size(ftxui::WIDTH, ftxui::LESS_THAN, 10) | ftxui::size(ftxui::HEIGHT, ftxui::LESS_THAN, 4)
+                                        | ftxui::align_right | ftxui::color(ftxui::Color::Gold3)
+            )
+        );
+
+
+        });
+    screen.Loop(renderer);
+
+    // Validate the users input
+    switch (selected) {
+    case 0:
+        showLoginWindow();
+        break;
+    case 1:
+        showSignupWindow();
+        break;
+    case 2:
+        exit(1);  //Close the program
+        break;
+    }
 }

@@ -52,31 +52,31 @@ void showSignupWindow()
 					(
 						ftxui::hbox
 						(
-							ftxui::text(L"First name:"),
+							ftxui::text(L"First name:        "),
 							firstnameInput->Render()
 						) | ftxui::border | ftxui::color(ftxui::Color::White) | ftxui::flex,
 
 						ftxui::hbox
 						(
-							ftxui::text(L"Last name:"),
+							ftxui::text(L"Last name:         "),
 							lastnameInput->Render()
 						) | ftxui::border | ftxui::color(ftxui::Color::White),
 						ftxui::hbox
 						(
-							ftxui::text(L"Email:    "),
+							ftxui::text(L"Email:             "),
 							emailInput->Render()
 						) | ftxui::border | ftxui::color(ftxui::Color::White),
 
 						ftxui::hbox
 						(
-							ftxui::text(L"Password: "),
-							passwordInput->Render() | ftxui::color(ftxui::Color::Black)
+							ftxui::text(L"Password:          "),
+							passwordInput->Render() /*| ftxui::color(ftxui::Color::Black) */
 						) | ftxui::border | ftxui::color(ftxui::Color::White),
 
 						ftxui::hbox
 						(
-							ftxui::text(L"Confirm Password:"),
-							confirmPasswordInput->Render() | ftxui::color(ftxui::Color::Black)
+							ftxui::text(L"Confirm Password:  "),
+							confirmPasswordInput->Render() /* | ftxui::color(ftxui::Color::Black)*/
 						) | ftxui::border | ftxui::color(ftxui::Color::White),
 						ftxui::hbox(
 							signupButton->Render()

@@ -40,7 +40,7 @@ void showLoginWindow()
 							ftxui::text(L"Login") | ftxui::flex | ftxui::center | ftxui::color(ftxui::Color::Green)
 						) | ftxui::border
 
-					),
+					) | ftxui::size(ftxui::HEIGHT, ftxui::GREATER_THAN, 4),
 
 					// Login form
 					ftxui::vbox
@@ -55,13 +55,13 @@ void showLoginWindow()
 						ftxui::hbox
 						(
 							ftxui::text(L"Password:  "),
-							passwordInput->Render() | ftxui::color(ftxui::Color::Black)
+							passwordInput->Render() /* | ftxui::bgcolor(ftxui::Color::White) */
 						) | ftxui::border | ftxui::color(ftxui::Color::White),
 						ftxui::hbox(
 							loginButton->Render()
 						) | ftxui::center | ftxui::color(ftxui::Color::White)
 
-					) | ftxui::border | ftxui::color(ftxui::Color::GrayDark),
+					) | ftxui::border | ftxui::color(ftxui::Color::GrayDark) | ftxui::size(ftxui::HEIGHT, ftxui::GREATER_THAN, 15),
 
 					// Menu button
 					ftxui::vbox
