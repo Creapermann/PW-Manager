@@ -1,13 +1,12 @@
 #include "UI_Signup.h"
 #include "../ViewModel/Signup.h"
 
+
+extern ftxui::ScreenInteractive screen;
+
 void showSignupWindow()
 {
 	Signup signup;
-
-	// Screen
-	auto screen = ftxui::ScreenInteractive::Fullscreen();
-
 
 	// Components
 	auto menuButton = ftxui::Button(" <<  Back to menu", showStartWindow, true);

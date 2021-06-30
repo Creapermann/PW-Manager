@@ -3,13 +3,11 @@
 #include "../Model/ProgramInfo.h"
 
 
+extern ftxui::ScreenInteractive screen;
+
 
 void showCreditsWindow()
 {
-	// Screen
-	auto screen = ftxui::ScreenInteractive::Fullscreen();
-
-
 	// Components
 	int dev1RightSize = 28;
 	auto dev1name = ftxui::Renderer([&] { return ftxui::text(L"        David Lazarescu"); });
