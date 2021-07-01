@@ -23,6 +23,8 @@ if(NOT ftxui_POPULATED)
 endif()
 # ------------------------------------------------------------------------------
 
+find_package(Sqlite3)
+
 
 # Add source to this project's executable.
 add_executable (PW-Manager  "src/Model/ProgramInfo.h"
