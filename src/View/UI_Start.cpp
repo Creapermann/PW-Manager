@@ -4,6 +4,7 @@
 #include "UI_Signup.h"
 #include "UI_Credits.h"
 
+
 extern ftxui::ScreenInteractive screen;
 
 void showStartWindow() {

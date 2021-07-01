@@ -7,8 +7,8 @@
 class Login {
 
 public:
-  std::wstring email;
-  std::wstring password;
+	std::wstring email{};
+	std::wstring password{};
 
 public:
   void loginButtonClick(std::wstring email, std::wstring password);
