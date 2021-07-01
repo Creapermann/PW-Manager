@@ -32,7 +32,7 @@ void showStartWindow() {
             showSignupWindow();
             break;
         case 2:
-            screen.ExitLoopClosure();
+            std::exit;
             break;
         }};
     ftxui::MenuBase::From(menu)->focused_style = ftxui::bgcolor(ftxui::Color::Blue);
