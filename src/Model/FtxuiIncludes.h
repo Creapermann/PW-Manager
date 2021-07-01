@@ -7,7 +7,6 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <stdio.h>
 
 // FTXUI Library
 #include <ftxui/dom/elements.hpp>
@@ -18,6 +17,7 @@
 #include <ftxui/component/screen_interactive.hpp>
 
 // SQLite3 Library
-#include <sqlite/sqlite3.h>
+#include "../lib/sqlite/sqlite3.h"
+
 
 // TODO: Reference additional headers your program requires here.

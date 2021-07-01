@@ -23,8 +23,7 @@ if(NOT ftxui_POPULATED)
 endif()
 # ------------------------------------------------------------------------------
 
-find_package(Sqlite3)
-
+find_package(sqlite3 REQUIRED)
 
 
 # Add source to this project's executable.
@@ -56,4 +55,5 @@ target_link_libraries(PW-Manager
   PRIVATE ftxui::screen
   PRIVATE ftxui::dom
   PRIVATE ftxui::component
+  sqlite3
   )

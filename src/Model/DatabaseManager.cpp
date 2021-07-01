@@ -34,7 +34,7 @@ bool DatabaseManager::initDB(const char* _path)
 		return false;
 	}
 
-	sqlite3_close(db);				 // Closes the connection
+	//sqlite3_close(db);				 // Closes the connection
 }
 
 /// <summary>

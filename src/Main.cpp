@@ -4,6 +4,7 @@
 
 int main()
 {
+	sqlite3* db;
 	// Starts the startwindow which lets the user login or register
 	showStartWindow();
 	
