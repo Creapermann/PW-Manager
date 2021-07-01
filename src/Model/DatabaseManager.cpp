@@ -1,5 +1,6 @@
 #include "DatabaseManager.h"
 
+
 int DatabaseManager::callback(void* data, int argc, char** argv, char** azColName)
 {
 	int i;
