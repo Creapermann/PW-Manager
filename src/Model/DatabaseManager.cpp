@@ -93,7 +93,7 @@ bool DatabaseManager::insertIntoTable(const char* _sql)
 }
 
 /// <summary>
-/// Print given elements by the query from the table
+/// Read given elements by the query from the table
 /// </summary>
 bool DatabaseManager::selectFromTable(const char* _sql)
 {
@@ -121,7 +121,9 @@ bool DatabaseManager::selectFromTable(const char* _sql)
 	sqlite3_close(db);
 }
 
-
+/// <summary>
+/// Update given elements by the query from the table
+/// </summary>
 bool DatabaseManager::updateTable(const char* _sql)
 {
 	int rc{};
@@ -147,7 +149,9 @@ bool DatabaseManager::updateTable(const char* _sql)
 	sqlite3_close(db);
 }
 
-
+/// <summary>
+/// Delete given elements by the query from the table
+/// </summary>
 bool DatabaseManager::deleteFromTable(const char* _sql)
 {
 	int rc{};
