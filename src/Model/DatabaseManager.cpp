@@ -5,28 +5,25 @@ int DatabaseManager::callback(void* data, int argc, char** argv, char** azColNam
 {
 	int i;
 
+	DatabaseManager::selectedInfo.clear();
+
 	for (i = 0; i < argc; i++)
 	{
-		printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+		DatabaseManager::selectedInfo.emplace_back(argv[i]);
 	}
 
-	printf("\n");
 	return 0;
 }
 
 /// <summary>
 /// Connect to the database, if no dabatbase with the given name exists, create a new one
 /// </summary>
-bool DatabaseManager::initDB(const char* _path)
+bool DatabaseManager::initDB(std::string _path)
 {
-	// Setting variables on initialisation
-	path = _path;
-
-
 	char* zErrMsg = 0;
 	int rc;
 
-	rc = sqlite3_open(path, &db);   // If no database with the given name exists, a new one gets created
+	rc = sqlite3_open(path.c_str(), &db);   // If no database with the given name exists, a new one gets created
 
 	if (rc != SQLITE_OK)
 	{						 // Checks if the to the db was sucessfull
@@ -41,12 +38,12 @@ bool DatabaseManager::initDB(const char* _path)
 /// <summary>
 /// Create a table with the given query
 /// </summary>
-bool DatabaseManager::createTable(const char* _sql)
+bool DatabaseManager::createTable(std::string _sql)
 {
 	int rc{};
 	char* zErrMsg;
 
-	rc = sqlite3_open(path, &db);
+	rc = sqlite3_open(path.c_str(), &db);
 
 	if (rc != SQLITE_OK)
 	{
@@ -54,7 +51,7 @@ bool DatabaseManager::createTable(const char* _sql)
 		return false;
 	}
 
-	rc = sqlite3_exec(db, _sql, NULL, 0, &zErrMsg);
+	rc = sqlite3_exec(db, _sql.c_str(), callback, 0, &zErrMsg);
 
 
 	if (rc != SQLITE_OK)
@@ -71,12 +68,12 @@ bool DatabaseManager::createTable(const char* _sql)
 /// <summary>
 /// Insert given elements by the query into the table
 /// </summary>
-bool DatabaseManager::insertIntoTable(const char* _sql)
+bool DatabaseManager::insertIntoTable(std::string _sql)
 {
 	int rc{};
 	char* zErrMsg = 0;
 
-	sqlite3_open(path, &db);
+	sqlite3_open(path.c_str(), &db);
 
 	if (rc != SQLITE_OK)
 	{
@@ -85,7 +82,7 @@ bool DatabaseManager::insertIntoTable(const char* _sql)
 	}
 
 
-	rc = sqlite3_exec(db, _sql, NULL, 0, &zErrMsg);
+	rc = sqlite3_exec(db, _sql.c_str(), NULL, 0, &zErrMsg);
 
 	if (rc != SQLITE_OK)
 	{
@@ -101,13 +98,13 @@ bool DatabaseManager::insertIntoTable(const char* _sql)
 /// <summary>
 /// Read given elements by the query from the table
 /// </summary>
-bool DatabaseManager::selectFromTable(const char* _sql)
+bool DatabaseManager::selectFromTable(std::string _sql)
 {
 	int rc{};
 	char* zErrMsg = 0;
-	const char* data{};
+	std::string data{};
 
-	sqlite3_open(path, &db);
+	sqlite3_open(path.c_str(), &db);
 
 	if (rc != SQLITE_OK)
 	{
@@ -116,7 +113,7 @@ bool DatabaseManager::selectFromTable(const char* _sql)
 	}
 
 
-	rc = sqlite3_exec(db, _sql, callback, (void*)data, &zErrMsg);
+	rc = sqlite3_exec(db, _sql.c_str(), callback, (void*)data.c_str(), &zErrMsg);
 
 	if (rc != SQLITE_OK)
 	{
@@ -132,12 +129,12 @@ bool DatabaseManager::selectFromTable(const char* _sql)
 /// <summary>
 /// Update given elements by the query from the table
 /// </summary>
-bool DatabaseManager::updateTable(const char* _sql)
+bool DatabaseManager::updateTable(std::string _sql)
 {
 	int rc{};
 	char* zErrMsg = 0;
 
-	sqlite3_open(path, &db);
+	sqlite3_open(path.c_str(), &db);
 
 	if (rc != SQLITE_OK)
 	{
@@ -146,7 +143,7 @@ bool DatabaseManager::updateTable(const char* _sql)
 	}
 
 
-	rc = sqlite3_exec(db, _sql, NULL, 0, &zErrMsg);
+	rc = sqlite3_exec(db, _sql.c_str(), NULL, 0, &zErrMsg);
 
 	if (rc != SQLITE_OK)
 	{
@@ -162,12 +159,12 @@ bool DatabaseManager::updateTable(const char* _sql)
 /// <summary>
 /// Delete given elements by the query from the table
 /// </summary>
-bool DatabaseManager::deleteFromTable(const char* _sql)
+bool DatabaseManager::deleteFromTable(std::string _sql)
 {
 	int rc{};
 	char* zErrMsg = 0;
 
-	sqlite3_open(path, &db);
+	sqlite3_open(path.c_str(), &db);
 
 	if (rc != SQLITE_OK)
 	{
@@ -176,7 +173,7 @@ bool DatabaseManager::deleteFromTable(const char* _sql)
 	}
 
 
-	rc = sqlite3_exec(db, _sql, NULL, 0, &zErrMsg);
+	rc = sqlite3_exec(db, _sql.c_str(), NULL, 0, &zErrMsg);
 
 	if (rc != SQLITE_OK)
 	{

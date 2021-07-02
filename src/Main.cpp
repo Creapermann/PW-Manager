@@ -6,8 +6,8 @@
 int main()
 {
 	DatabaseManager dbm;
-	std::filesystem::create_directories("./DontDelete/");
-	dbm.initDB("./DontDelete/Passwords.db");
+	std::filesystem::create_directories(dbm.folderName);
+	dbm.initDB(dbm.path);
 
 	// Starts the startwindow which lets the user login or register
 	showStartWindow();
