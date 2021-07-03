@@ -25,12 +25,16 @@ void showMenuWindow()
 	auto symbolsCheckBox = ftxui::Checkbox(L"include symbols   (e.g. @#$%)", &menu.includeSymbols);
 
 	auto generatePasswordButton = ftxui::Button(L"Generate", [&] { menu.generatePassword(); }, false);
-	auto copyPasswordButton = ftxui::Button("Copy To Clipboard", [&] { menu.copyPasswordToClipboard(); }, false);
+	auto copyPasswordButton = ftxui::Button(L"Copy To Clipboard", [&] { menu.copyPasswordToClipboard(); }, false);
+
+
+	auto newNoteButton = ftxui::Button(L"New note", [&] { menu.createNewNote(); }, false);
 
 
 	// Container
 	auto container = ftxui::Container::Vertical(
 		{
+			newNoteButton,
 			settingsButton,
 			passwordLengthInput,
 			lowercaseCheckBox,
@@ -51,9 +55,13 @@ void showMenuWindow()
 					// Left side
 					ftxui::vbox
 					(
-						// Title
-						ftxui::text(L"--- MY VAULT ---") | ftxui::hcenter,
-
+						ftxui::hbox
+						(
+							// Title
+							ftxui::text(L"--- MY VAULT ---") | ftxui::hcenter,
+							newNoteButton->Render()
+						),
+						
 						// Separator
 						ftxui::separator()
 

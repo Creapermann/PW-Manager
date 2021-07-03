@@ -9,7 +9,7 @@ int DatabaseManager::callback(void* data, int argc, char** argv, char** azColNam
 
 	for (i = 0; i < argc; i++)
 	{
-		DatabaseManager::selectedInfo.emplace_back(argv[i]);
+		DatabaseManager::selectedInfo.emplace_back(argv[i]);         //
 	}
 
 	return 0;
@@ -123,6 +123,8 @@ bool DatabaseManager::selectFromTable(std::string _sql)
 
 	sqlite3_close(db);
 
+	if (selectedInfo.empty())   // It returns false, no data could be selected
+		return false;
 	return true;
 }
 
