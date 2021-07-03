@@ -6,13 +6,155 @@
 #include <cassert>
 #include <string>
 
+#include <vector>
+#include <iostream>
+#include <sstream>
+#include <random>
+#include <ctime>
+
 
 extern User user;
 
 
 void Menu::generatePassword()
 {
-	generatedPassword = L"63!@Rh}mG74Rv>BK";
+	// Converts from wstring to int
+	std::stringstream ss(std::string(generatedPasswordLength.begin(), generatedPasswordLength.end()));
+	int length;
+	ss >> length;
+	ss.clear();
+
+	if (length <= 0 || length >= 1000)
+	{
+		generatedPassword = L"";
+		return;
+	}
+
+	std::vector<char> options{};
+
+	if (lowercaseLetters)
+	{
+		options.emplace_back('a');
+		options.emplace_back('b');
+		options.emplace_back('c');
+		options.emplace_back('d');
+		options.emplace_back('e');
+		options.emplace_back('f');
+		options.emplace_back('g');
+		options.emplace_back('h');
+		options.emplace_back('i');
+		options.emplace_back('j');
+		options.emplace_back('k');
+		options.emplace_back('l');
+		options.emplace_back('m');
+		options.emplace_back('n');
+		options.emplace_back('o');
+		options.emplace_back('p');
+		options.emplace_back('q');
+		options.emplace_back('r');
+		options.emplace_back('s');
+		options.emplace_back('t');
+		options.emplace_back('u');
+		options.emplace_back('v');
+		options.emplace_back('w');
+		options.emplace_back('x');
+		options.emplace_back('y');
+		options.emplace_back('z');
+	}
+	if (uppercaseLetters)
+	{
+		options.emplace_back('A');
+		options.emplace_back('B');
+		options.emplace_back('C');
+		options.emplace_back('D');
+		options.emplace_back('E');
+		options.emplace_back('F');
+		options.emplace_back('G');
+		options.emplace_back('H');
+		options.emplace_back('I');
+		options.emplace_back('J');
+		options.emplace_back('K');
+		options.emplace_back('L');
+		options.emplace_back('M');
+		options.emplace_back('N');
+		options.emplace_back('O');
+		options.emplace_back('P');
+		options.emplace_back('Q');
+		options.emplace_back('R');
+		options.emplace_back('S');
+		options.emplace_back('T');
+		options.emplace_back('U');
+		options.emplace_back('V');
+		options.emplace_back('W');
+		options.emplace_back('X');
+		options.emplace_back('Y');
+		options.emplace_back('Z');
+	}
+	if (includeNumbers)
+	{
+		options.emplace_back('0');
+		options.emplace_back('1');
+		options.emplace_back('2');
+		options.emplace_back('3');
+		options.emplace_back('4');
+		options.emplace_back('5');
+		options.emplace_back('6');
+		options.emplace_back('7');
+		options.emplace_back('8');
+		options.emplace_back('9');
+		options.emplace_back('0');
+		options.emplace_back('1');
+		options.emplace_back('2');
+		options.emplace_back('3');
+		options.emplace_back('4');
+		options.emplace_back('5');
+		options.emplace_back('6');
+		options.emplace_back('7');
+		options.emplace_back('8');
+		options.emplace_back('9');
+	}
+	if (includeSymbols)
+	{
+		options.emplace_back('~');
+		options.emplace_back('!');
+		options.emplace_back('@');
+		options.emplace_back('#');
+		options.emplace_back('$');
+		options.emplace_back('%');
+		options.emplace_back('^');
+		options.emplace_back('*');
+		options.emplace_back('(');
+		options.emplace_back(')');
+		options.emplace_back('-');
+		options.emplace_back('_');
+		options.emplace_back('+');
+		options.emplace_back('=');
+		options.emplace_back('{');
+		options.emplace_back('}');
+		options.emplace_back('[');
+		options.emplace_back(']');
+		options.emplace_back('/');
+		options.emplace_back(':');
+		options.emplace_back(';');
+		options.emplace_back('<');
+		options.emplace_back('>');
+		options.emplace_back('.');
+		options.emplace_back('?');
+		options.emplace_back('"');
+	}
+
+
+	std::default_random_engine randomNumGenerator(time(0));
+	std::uniform_int_distribution<int> rndm(0, options.size() - 1);
+
+	std::string tempPW;
+	
+	for (int i = 0; i < length; i++)
+	{	
+		tempPW += options[rndm(randomNumGenerator)];
+	}
+
+	generatedPassword = std::wstring(tempPW.begin(), tempPW.end());
 }
 
 void Menu::copyPasswordToClipboard()
