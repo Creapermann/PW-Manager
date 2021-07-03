@@ -20,9 +20,12 @@ void Login::loginButtonClick(std::wstring email, std::wstring password)
 			{
 				dbm.selectFromTable("SELECT ID from USERS WHERE EMAIL='" + std::string(email.begin(), email.end()) + "'");
 				user.UserID = dbm.selectedInfo[0];
+
+				DatabaseManager::selectedInfo.clear();   //clears selectedInfo again
 				showMenuWindow();
 			}
 		}
+		DatabaseManager::selectedInfo.clear();   //clears selectedInfo again
 	}
 }
 

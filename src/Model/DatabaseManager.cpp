@@ -1,6 +1,8 @@
 #include "DatabaseManager.h"
 
-
+/// <summary>
+/// Gets called in selectFromTable() and adds all the requested information into a vector
+/// </summary>
 int DatabaseManager::callback(void* data, int argc, char** argv, char** azColName)
 {
 	int i;

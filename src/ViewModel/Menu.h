@@ -14,11 +14,11 @@ public:
 	std::wstring generatedPassword{L""};
 
 
-	std::wstring newNoteTitle{L"Youtube"};
+	std::wstring newNoteTitle{L"Google"};
 	std::wstring newNoteUsername{L"Creapermann"};
 	std::wstring newNoteEmail{L"creapermann37@gmail.com"};
-	std::wstring newNotePassword{L"123456"};
-	std::wstring newNoteDescription{L"My youtube login data which is safely stored by this awsome password manager"};
+	std::wstring newNotePassword{L"1234567"};
+	std::wstring newNoteDescription{L"My google login data which is safely stored by this awsome password manager"};
 	
 
 public:
