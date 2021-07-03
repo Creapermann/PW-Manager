@@ -2,8 +2,7 @@
 
 #include "../Model/DatabaseManager.h"
 #include "../Model/User.h"
-
-#include <Windows.h>
+#include "clip/clip.h"
 #include <cassert>
 #include <string>
 
@@ -18,17 +17,9 @@ void Menu::generatePassword()
 
 void Menu::copyPasswordToClipboard()
 {
-	OpenClipboard(0);
-	EmptyClipboard();
-	std::string op = std::string(generatedPassword.begin(), generatedPassword.end());
-	const size_t ln = strlen(op.c_str()) + 1;
-	HGLOBAL h = GlobalAlloc(GMEM_MOVEABLE, ln);
-	assert(h != 0 && "h should not be 0");
-	memcpy(GlobalLock(h), op.c_str(), ln);
-	GlobalUnlock(h);
-	SetClipboardData(CF_TEXT, h);
-	CloseClipboard();
+	clip::set_text(std::string(generatedPassword.begin(), generatedPassword.end()));
 }
+
 
 
 void Menu::createNewNote()
@@ -94,8 +85,8 @@ std::vector<std::wstring> Menu::getMenuEntries()
 
 	std::vector<std::wstring> data;
 
-	dbm.selectFromTable("SELECT TITLE FROM NOTES "
-		"WHERE USER_ID=""'" + user.UserID + "';");
+	dbm.selectFromTable("SELECT TITLE FROM NOTES WHERE USER_ID = " + user.UserID + " ;");
+
 	for (std::string s : dbm.selectedInfo) {
 		std::wstring temp(s.begin(), s.end());
 		data.push_back(temp);

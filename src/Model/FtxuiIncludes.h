@@ -21,7 +21,7 @@
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)
 #include <winsqlite/winsqlite3.h>
 #elif __linux__
-#include <sqlite/sqlite3.h>
+#include <sqlite3.h>
 #endif
 
 // TODO: Reference additional headers your program requires here.

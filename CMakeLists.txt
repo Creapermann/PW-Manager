@@ -23,7 +23,7 @@ if(NOT ftxui_POPULATED)
 endif()
 # ------------------------------------------------------------------------------
 
-find_package(sqlite3 REQUIRED)
+find_package(sqlite3)
 
 
 # Add source to this project's executable.
@@ -43,8 +43,15 @@ add_executable (PW-Manager  "src/Model/ProgramInfo.h"
 							"src/ViewModel/Signup.h" 
 							"src/View/UI_Credits.cpp" 
 							"src/View/UI_Credits.h" 
-							
- "src/Model/DatabaseManager.h" "src/Model/DatabaseManager.cpp" "src/View/UI_Menu.cpp" "src/View/UI_Menu.h" "src/ViewModel/Menu.cpp"  "src/Model/User.h" "src/Shared.h")
+							"src/Model/DatabaseManager.h"
+							"src/Model/DatabaseManager.cpp" 
+		   				    "src/View/UI_Menu.cpp" 
+						    "src/View/UI_Menu.h" 
+						    "src/ViewModel/Menu.cpp"  
+						 "src/Model/User.h" 
+						 "src/Shared.h" 
+						 "src/View/UI_AddNote.cpp"
+						 "src/View/UI_AddNote.h")
 
 set_target_properties(PW-Manager PROPERTIES CXX_STANDARD 17)
 target_compile_features(PW-Manager PRIVATE cxx_std_17)
@@ -55,5 +62,16 @@ target_link_libraries(PW-Manager
   PRIVATE ftxui::screen
   PRIVATE ftxui::dom
   PRIVATE ftxui::component
+  clip
   sqlite3
   )
+
+  # Disable clip examples and tests
+set(CLIP_EXAMPLES OFF CACHE BOOL "Compile clip examples")
+set(CLIP_TESTS OFF CACHE BOOL "Compile clip tests")
+
+# In case that you have ${PNG_LIBRARY} set to support copy/paste images on Linux
+#set(CLIP_X11_PNG_LIBRARY "${PNG_LIBRARY}")
+
+# Add clip subdirectory to compile the library
+add_subdirectory(lib/clip)

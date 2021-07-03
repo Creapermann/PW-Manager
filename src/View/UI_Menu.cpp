@@ -1,6 +1,5 @@
 #include "UI_Menu.h"
-#include "../ViewModel/Menu.h"
-#include "../Model/ProgramInfo.h"
+#include "../View/UI_AddNote.h"
 
 
 extern ftxui::ScreenInteractive screen;
@@ -14,7 +13,7 @@ void showMenuWindow()
 
 	// Components
 	auto settingsButton = ftxui::Button("(i)", [&] {; }, false);
-	auto newNoteButton = ftxui::Button("Add new note", [&] {menu.createNewNote(); }, true);
+	auto newNoteButton = ftxui::Button("Add new note", showAddNoteWindow, true);
 
 
 	ftxui::Component passwordLengthInput = ftxui::Input(&menu.generatedPasswordLength, L"10");
@@ -141,7 +140,18 @@ void showMenuWindow()
 					) | ftxui::border | ftxui::flex
 				);
 		});
+	bool refresh_ui_continue = true;
 
+	std::thread refresh_ui([&] {
+		while (refresh_ui_continue) {
+			using namespace std::chrono_literals;
+			std::this_thread::sleep_for(0.05s);
+			menu.getMenuEntries();
+			screen.PostEvent(ftxui::Event::Custom);
+		}
+		});
+	refresh_ui_continue = false;
+	refresh_ui.join();
 
 	screen.Loop(renderer);
 }

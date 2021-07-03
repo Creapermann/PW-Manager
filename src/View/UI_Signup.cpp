@@ -4,7 +4,6 @@
 #include "../Shared.h"
 
 
-
 void showSignupWindow()
 {
 	Signup signup;
