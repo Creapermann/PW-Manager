@@ -59,14 +59,13 @@ void Menu::createNewNote()
 			"EMAIL          TEXT		  NOT NULL, "
 			"PASSWORD       TEXT		  NOT NULL, "
 			"DESCRIPTION    TEXT          NOT NULL); "
-		);
+		); 
 
-
-		// Insert into db
+		   // Insert into db
 		dbm.insertIntoTable("INSERT INTO NOTES (PARENTID, TITLE, USERNAME, EMAIL, PASSWORD, DESCRIPTION) "
 			"VALUES"
 			"("
-			"'" + user.UserID + "', "
+			"'" + user.UserID + "', "  
 			"'" + std::string(newNoteTitle.begin(), newNoteTitle.end()) + "', "
 			"'" + std::string(newNoteUsername.begin(), newNoteUsername.end()) + "', "
 			"'" + std::string(newNoteEmail.begin(), newNoteEmail.end()) + "', "
@@ -79,4 +78,27 @@ void Menu::createNewNote()
 		//TODO: Notename already exists error handling
 		;
 	}
+}
+
+std::vector<std::wstring> Menu::getMenuEntries()
+{
+	DatabaseManager dbm;
+	dbm.createTable("CREATE TABLE IF NOT EXISTS NOTES("
+		"PARENTID       TEXT          NOT NULL, "
+		"TITLE          TEXT		  NOT NULL, "
+		"USERNAME       TEXT          NOT NULL, "
+		"EMAIL          TEXT		  NOT NULL, "
+		"PASSWORD       TEXT		  NOT NULL, "
+		"DESCRIPTION    TEXT          NOT NULL); "
+	);
+
+	std::vector<std::wstring> data;
+
+	dbm.selectFromTable("SELECT TITLE FROM NOTES "
+		"WHERE USER_ID=""'" + user.UserID + "';");
+	for (std::string s : dbm.selectedInfo) {
+		std::wstring temp(s.begin(), s.end());
+		data.push_back(temp);
+	}
+	return data;
 }

@@ -1,7 +1,8 @@
 #pragma once
 
 #include <string>
-
+#include "../Model/FtxuiIncludes.h"
+#include "../Model/DatabaseManager.h"
 
 
 class Menu
@@ -28,4 +29,5 @@ public:
 	void copyPasswordToClipboard();
 	
 	void createNewNote();
+	std::vector<std::wstring> getMenuEntries();
 };

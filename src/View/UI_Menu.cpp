@@ -2,18 +2,19 @@
 #include "../ViewModel/Menu.h"
 #include "../Model/ProgramInfo.h"
 
-#include "../Shared.h"
 
+extern ftxui::ScreenInteractive screen;
 
 
 void showMenuWindow()
 {
 	Menu menu;
 
-	int size{60};
+	int size{ 60 };
 
 	// Components
-	auto settingsButton = ftxui::Button("(i)", [&] { ; }, false);
+	auto settingsButton = ftxui::Button("(i)", [&] {; }, false);
+	auto newNoteButton = ftxui::Button("Add new note", [&] {menu.createNewNote(); }, true);
 
 
 	ftxui::Component passwordLengthInput = ftxui::Input(&menu.generatedPasswordLength, L"10");
@@ -24,18 +25,19 @@ void showMenuWindow()
 	auto numbersCheckBox = ftxui::Checkbox(L"include numbers   (e.g. 1234)", &menu.includeNumbers);
 	auto symbolsCheckBox = ftxui::Checkbox(L"include symbols   (e.g. @#$%)", &menu.includeSymbols);
 
-	auto generatePasswordButton = ftxui::Button(L"Generate", [&] { menu.generatePassword(); }, false);
-	auto copyPasswordButton = ftxui::Button(L"Copy To Clipboard", [&] { menu.copyPasswordToClipboard(); }, false);
+	auto generatePasswordButton = ftxui::Button(L"Generate", [&] {menu.generatePassword(); }, false);
+	auto copyPasswordButton = ftxui::Button("Copy To Clipboard", [&] {menu.copyPasswordToClipboard(); }, false);
 
+	std::vector<std::wstring> entries = menu.getMenuEntries();
+	int selected = 0;
 
-	auto newNoteButton = ftxui::Button(L"New note", [&] { menu.createNewNote(); }, false);
-
+	auto vaultMenu = ftxui::Menu(&entries, &selected);
 
 	// Container
-	auto container = ftxui::Container::Vertical(
-		{
+	auto container = ftxui::Container::Vertical({
 			newNoteButton,
 			settingsButton,
+			vaultMenu,
 			passwordLengthInput,
 			lowercaseCheckBox,
 			uppercaseCheckBox,
@@ -48,7 +50,7 @@ void showMenuWindow()
 
 
 	auto renderer = ftxui::Renderer(container, [&]
-	{
+		{
 			return
 				ftxui::hbox(
 
@@ -61,9 +63,12 @@ void showMenuWindow()
 							ftxui::text(L"--- MY VAULT ---") | ftxui::hcenter,
 							newNoteButton->Render()
 						),
-						
+
 						// Separator
-						ftxui::separator()
+						ftxui::separator(),
+
+						// Notes menu
+						vaultMenu->Render()
 
 					) | ftxui::border | ftxui::size(ftxui::WIDTH, ftxui::GREATER_THAN, 65),
 
@@ -135,7 +140,7 @@ void showMenuWindow()
 
 					) | ftxui::border | ftxui::flex
 				);
-	});
+		});
 
 
 	screen.Loop(renderer);

@@ -114,7 +114,7 @@ bool DatabaseManager::selectFromTable(std::string _sql)
 		return false;
 	}
 
-
+	
 	rc = sqlite3_exec(db, _sql.c_str(), callback, (void*)data.c_str(), &zErrMsg);
 
 	if (rc != SQLITE_OK)
