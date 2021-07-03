@@ -14,6 +14,7 @@ void showLoginWindow()
 	auto menuButton = ftxui::Button(" <<  Back to menu", showStartWindow, true);
 	auto loginButton = ftxui::Button("Login", [&] {login.loginButtonClick(login.email, login.password); }, true);
 
+
 	ftxui::Component emailInput = ftxui::Input(&login.email, "someone@example.com");
 	ftxui::Component passwordInput = ftxui::Input(&login.password, "********");
 
