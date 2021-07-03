@@ -11,6 +11,6 @@ public:
 	std::wstring password{};
 
 public:
-  void loginButtonClick(std::wstring email, std::wstring password);
+  void loginButtonClick();
   void menuButtonClick();
 };

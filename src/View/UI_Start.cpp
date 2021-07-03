@@ -4,8 +4,8 @@
 #include "UI_Signup.h"
 #include "UI_Credits.h"
 
+#include "../Shared.h"
 
-extern ftxui::ScreenInteractive screen;
 
 void showStartWindow() {
 
@@ -18,10 +18,13 @@ void showStartWindow() {
         L"Create New Account",
         L"Exit"
     };
+
     // Selected item
     int selected = 0;
+    
     // Menu
     auto menu = ftxui::Menu(&entries, &selected);
+
     // Addaptions
     ftxui::MenuBase::From(menu)->on_enter = [&]{    
         switch (selected) {
@@ -35,9 +38,8 @@ void showStartWindow() {
             std::exit;
             break;
         }};
+
     ftxui::MenuBase::From(menu)->focused_style = ftxui::bgcolor(ftxui::Color::Blue);
-
-
 
 
     // Container
@@ -48,8 +50,10 @@ void showStartWindow() {
         });
 
     auto renderer = ftxui::Renderer(container, [&] {
-        return ftxui::vbox(
-            ftxui::hbox(
+        return ftxui::vbox
+        (
+            ftxui::hbox
+            (
                 // Title
                 ftxui::text(std::wstring(pInfo::name.begin(), pInfo::name.end())) |
                 ftxui::flex | ftxui::bold | ftxui::color(ftxui::Color::Green) | ftxui::center,
@@ -59,11 +63,12 @@ void showStartWindow() {
 
             ) | ftxui::border,
 
-            // Seperator
+            // Separator
             ftxui::separator() | ftxui::color(ftxui::Color::GrayDark),
 
             // Menu
-            ftxui::vbox(
+            ftxui::vbox
+            (
                 menu->Render() | ftxui::border
             ) | ftxui::size(ftxui::HEIGHT, ftxui::GREATER_THAN, 6),
 

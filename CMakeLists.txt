@@ -43,8 +43,8 @@ add_executable (PW-Manager  "src/Model/ProgramInfo.h"
 							"src/ViewModel/Signup.h" 
 							"src/View/UI_Credits.cpp" 
 							"src/View/UI_Credits.h" 
-							"src/Shared.cpp"
- "src/Model/DatabaseManager.h" "src/Model/DatabaseManager.cpp" "src/View/UI_Menu.cpp" "src/View/UI_Menu.h" "src/ViewModel/Menu.cpp" "src/Model/User.cpp" "src/Model/User.h")
+							
+ "src/Model/DatabaseManager.h" "src/Model/DatabaseManager.cpp" "src/View/UI_Menu.cpp" "src/View/UI_Menu.h" "src/ViewModel/Menu.cpp"  "src/Model/User.h" "src/Shared.h")
 
 set_target_properties(PW-Manager PROPERTIES CXX_STANDARD 17)
 target_compile_features(PW-Manager PRIVATE cxx_std_17)

@@ -1,8 +1,9 @@
 #include "UI_Signup.h"
 #include "../ViewModel/Signup.h"
 
+#include "../Shared.h"
 
-extern ftxui::ScreenInteractive screen;
+
 
 void showSignupWindow()
 {
@@ -82,6 +83,7 @@ void showSignupWindow()
 						) | ftxui::center | ftxui::color(ftxui::Color::White)
 
 					) | ftxui::border | ftxui::color(ftxui::Color::GrayDark),
+
 
 					// Menu button
 					ftxui::vbox

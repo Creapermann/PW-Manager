@@ -4,7 +4,8 @@
 #include "../Model/User.h"
 
 #include <Windows.h>
-#include <conio.h>
+#include <cassert>
+#include <string>
 
 
 extern User user;
@@ -19,10 +20,11 @@ void Menu::copyPasswordToClipboard()
 {
 	OpenClipboard(0);
 	EmptyClipboard();
-	const char* op = "Hello this is a test";
-	const size_t ln = strlen(op) + 1;
+	std::string op = std::string(generatedPassword.begin(), generatedPassword.end());
+	const size_t ln = strlen(op.c_str()) + 1;
 	HGLOBAL h = GlobalAlloc(GMEM_MOVEABLE, ln);
-	memcpy(GlobalLock(h), op, ln);
+	assert(h != 0 && "h should not be 0");
+	memcpy(GlobalLock(h), op.c_str(), ln);
 	GlobalUnlock(h);
 	SetClipboardData(CF_TEXT, h);
 	CloseClipboard();

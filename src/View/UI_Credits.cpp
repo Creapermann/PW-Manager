@@ -2,8 +2,7 @@
 #include "UI_Start.h"
 #include "../Model/ProgramInfo.h"
 
-
-extern ftxui::ScreenInteractive screen;
+#include "../Shared.h"
 
 
 void showCreditsWindow()
@@ -123,11 +122,7 @@ void showCreditsWindow()
 					ftxui::hbox() | ftxui::size(ftxui::HEIGHT, ftxui::GREATER_THAN, 1),
 
 					// Menu button
-					ftxui::vbox
-					(
-						menuButton->Render() | ftxui::size(ftxui::WIDTH, ftxui::LESS_THAN, 8)
-					)
-
+					menuButton->Render() | ftxui::size(ftxui::WIDTH, ftxui::LESS_THAN, 8)
 				);
 		});
 

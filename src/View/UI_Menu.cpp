@@ -2,8 +2,8 @@
 #include "../ViewModel/Menu.h"
 #include "../Model/ProgramInfo.h"
 
+#include "../Shared.h"
 
-extern ftxui::ScreenInteractive screen;
 
 
 void showMenuWindow()

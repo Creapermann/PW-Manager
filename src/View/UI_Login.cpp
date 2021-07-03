@@ -1,8 +1,8 @@
 #include "UI_Login.h"
 #include "../ViewModel/Login.h"
 
+#include "../Shared.h"
 
-extern ftxui::ScreenInteractive screen;
 
 
 void showLoginWindow()
@@ -12,7 +12,7 @@ void showLoginWindow()
 
 	// Components
 	auto menuButton = ftxui::Button(" <<  Back to menu", showStartWindow, true);
-	auto loginButton = ftxui::Button("Login", [&] {login.loginButtonClick(login.email, login.password); }, true);
+	auto loginButton = ftxui::Button("Login", [&] {login.loginButtonClick(); }, true);
 
 
 	ftxui::Component emailInput = ftxui::Input(&login.email, "someone@example.com");

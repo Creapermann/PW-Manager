@@ -13,7 +13,7 @@ void Signup::signupButtonClick(std::wstring firstname, std::wstring lastname, st
 		"ID INTEGER     PRIMARY KEY   AUTOINCREMENT, "
 		"FIRSTNAME      TEXT		  NOT NULL, "
 		"LASTNAME       TEXT		  NOT NULL, "
-		"EMAIL          TEXT		  NOT NULL, "
+		"EMAIL          TEXT		  NOT NULL          UNIQUE, "
 		"PASSWORD       TEXT		  NOT NULL );"
 		);
 		
@@ -21,7 +21,7 @@ void Signup::signupButtonClick(std::wstring firstname, std::wstring lastname, st
 		// Insert into db
 		dbm.insertIntoTable("INSERT INTO USERS (FIRSTNAME, LASTNAME, EMAIL, PASSWORD) "
 							"VALUES"
-							"(" 
+								"(" 
 							"'" + std::string(firstname.begin(), firstname.end()) + "', "
 							"'" + std::string(lastname.begin(), lastname.end())   + "', "
 							"'" + std::string(email.begin(), email.end())		  + "', "
