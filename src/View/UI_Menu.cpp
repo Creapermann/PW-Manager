@@ -24,8 +24,8 @@ void showMenuWindow()
 	auto numbersCheckBox = ftxui::Checkbox(L"include numbers   (e.g. 1234)", &menu.includeNumbers);
 	auto symbolsCheckBox = ftxui::Checkbox(L"include symbols   (e.g. @#$%)", &menu.includeSymbols);
 
-	auto generatePasswordButton = ftxui::Button(L"Generate", [&] { ; }, false);
-	auto copyPasswordButton = ftxui::Button("Copy To Clipboard", [&] { ; }, false);
+	auto generatePasswordButton = ftxui::Button(L"Generate", [&] { menu.generatePassword(); }, false);
+	auto copyPasswordButton = ftxui::Button("Copy To Clipboard", [&] { menu.copyPasswordToClipboard(); }, false);
 
 
 	// Container
@@ -74,6 +74,9 @@ void showMenuWindow()
 						// Separator
 						ftxui::separator(),
 
+						// Spacing
+						ftxui::text(L" "),
+
 						// Password Generator
 						ftxui::vbox
 						(
@@ -108,7 +111,7 @@ void showMenuWindow()
 								ftxui::separator() | ftxui::color(ftxui::Color::GrayDark),
 
 
-								ftxui::text(menu.generatedPassword),
+								ftxui::text(menu.generatedPassword) | ftxui::hcenter,
 
 
 								ftxui::separator() | ftxui::color(ftxui::Color::GrayDark),

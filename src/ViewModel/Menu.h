@@ -11,6 +11,9 @@ public:
 	bool uppercaseLetters = true;
 	bool includeNumbers = true;
 	bool includeSymbols = true;
+	std::wstring generatedPassword{L""};
 
-	std::wstring generatedPassword{L"63!@Rh}mG74Rv>BK"};
+public:
+	void generatePassword();
+	void copyPasswordToClipboard();
 };
