@@ -48,10 +48,10 @@ add_executable (PW-Manager  "src/Model/ProgramInfo.h"
 		   				    "src/View/UI_Menu.cpp" 
 						    "src/View/UI_Menu.h" 
 						    "src/ViewModel/Menu.cpp"  
-						 "src/Model/User.h" 
-						 "src/Shared.h" 
-						 "src/View/UI_AddNote.cpp"
-						 "src/View/UI_AddNote.h")
+						    "src/Model/User.h" 
+						    "src/Shared.h" 
+						    "src/View/UI_AddNote.cpp"
+						    "src/View/UI_AddNote.h")
 
 set_target_properties(PW-Manager PROPERTIES CXX_STANDARD 17)
 target_compile_features(PW-Manager PRIVATE cxx_std_17)
