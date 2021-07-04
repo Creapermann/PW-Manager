@@ -28,16 +28,25 @@ void Login::loginButtonClick()
 				dbm.selectFromTable("SELECT ID from USERS WHERE EMAIL='" + std::string(email.begin(), email.end()) + "'");
 				user.UserID = dbm.selectedInfo[0];
 
-				DatabaseManager::selectedInfo.clear();   //clears selectedInfo again
+				DatabaseManager::selectedInfo.clear();
+
 
 				Menu menu;
-
 				menu.getMenuEntries();
 				showMenuWindow();
 				
 			}
+			else
+			{
+				DatabaseManager::selectedInfo.clear();
+				//TODO: Password wrong error handling
+			}
 		}
-		DatabaseManager::selectedInfo.clear();   //clears selectedInfo again
+		else
+		{
+			DatabaseManager::selectedInfo.clear();
+			//TODO: Email wrong error handling
+		}
 	}
 }
 

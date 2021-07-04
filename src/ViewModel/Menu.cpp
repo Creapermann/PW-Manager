@@ -212,12 +212,16 @@ void Menu::createNewNote()
 			"'" + std::string(newNotePassword.begin(), newNotePassword.end()) + "', "
 			"'" + std::string(newNoteDescription.begin(), newNoteDescription.end()) + "'"
 			" );");
+
+		getMenuEntries();
 	}
 	else
 	{
 		//TODO: Notename already exists error handling
 		;
 	}
+
+	DatabaseManager::selectedInfo.clear();
 }
 
 void Menu::getMenuEntries()
