@@ -41,5 +41,5 @@ public:
 	void copyPasswordToClipboard();
 	
 	void createNewNote();
-	void getMenuEntries();
+	std::vector<std::wstring> getMenuEntries();
 };

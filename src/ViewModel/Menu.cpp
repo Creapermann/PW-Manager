@@ -224,7 +224,7 @@ void Menu::createNewNote()
 	DatabaseManager::selectedInfo.clear();
 }
 
-void Menu::getMenuEntries()
+std::vector<std::wstring> Menu::getMenuEntries()
 {
 	DatabaseManager dbm;
 	dbm.createTable("CREATE TABLE IF NOT EXISTS NOTES("
@@ -239,10 +239,13 @@ void Menu::getMenuEntries()
 
 	dbm.selectFromTable("SELECT TITLE from NOTES WHERE PARENTID='" + user.UserID + "'");
 
-	for (std::string s : DatabaseManager::selectedInfo) {
-		std::wstring temp(s.begin(), s.end());
-		notes.push_back(temp);
+	std::vector<std::wstring> data;
+
+for (auto s : DatabaseManager::selectedInfo) {
+		data.push_back(std::wstring(s.begin(), s.end()));
 	}
 
 	DatabaseManager::selectedInfo.clear();
+
+	return data;
 }

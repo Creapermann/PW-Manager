@@ -28,8 +28,9 @@ void showMenuWindow()
 	auto copyPasswordButton = ftxui::Button("Copy To Clipboard", [&] {menu.copyPasswordToClipboard(); }, false);
 
 	int selected = 0;
-
-	auto vaultMenu = ftxui::Menu(&menu.notes, &selected);
+	std::vector<std::wstring> entries = menu.getMenuEntries();
+	auto vaultMenu = ftxui::Menu(&entries, &selected);
+	//ftxui::MenuBase::From(vaultMenu)->
 
 	// Container
 	auto container = ftxui::Container::Vertical({
@@ -139,7 +140,7 @@ void showMenuWindow()
 					) | ftxui::border | ftxui::flex
 				);
 		});
-	bool refresh_ui_continue = true;
+	/*bool refresh_ui_continue = true;
 
 	std::thread refresh_ui([&] {
 		while (refresh_ui_continue) {
@@ -150,7 +151,7 @@ void showMenuWindow()
 		}
 		});
 	refresh_ui_continue = false;
-	refresh_ui.join();
+	refresh_ui.join();*/
 
 	screen.Loop(renderer);
 }
