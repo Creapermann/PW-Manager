@@ -181,6 +181,13 @@ void Menu::createNewNote()
 		}
 	}
 
+	// If no password was given
+	if (newNotePassword == L"")
+	{
+		// TODO: Error handling
+		return;
+	}
+
 	// Insert the new note if the is no already existing note with the same name
 	if (noteWithSameNameAlreadyExists != true)
 	{

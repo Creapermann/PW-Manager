@@ -8,11 +8,12 @@ void showAddNoteWindow()
 {	
 	Menu menu;
 
-	auto titleInput = ftxui::Input(&menu.newNoteTitle, "Title/Website Name");
-	auto usernameInput = ftxui::Input(&menu.newNoteUsername,"Username (Optional)");
+	auto titleInput = ftxui::Input(&menu.newNoteTitle, "Title");
+	auto usernameInput = ftxui::Input(&menu.newNoteUsername,"Username");
 	auto emailInput = ftxui::Input(&menu.newNoteEmail, "Email");
 	auto passwordInput = ftxui::Input(&menu.newNotePassword, "Password");
-	auto descriptionInput = ftxui::Input(&menu.newNoteDescription, "Description (optional)");
+	auto descriptionInput = ftxui::Input(&menu.newNoteDescription, "Description");
+
 	auto addButton = ftxui::Button("Add New Note", [&] {menu.createNewNote(); showMenuWindow(); }, true);
 	auto quitButton = ftxui::Button("Cancel", showMenuWindow,true);
 
@@ -38,30 +39,30 @@ void showAddNoteWindow()
 				ftxui::vbox
 				(
 					ftxui::hbox(
-						ftxui::text(L"Title:     "),
+						ftxui::text(L"Title*:       "),
 						titleInput->Render()
 					) | ftxui::border | ftxui::color(ftxui::Color::White),
 
 					ftxui::hbox(
-						ftxui::text(L"Username:  "),
+						ftxui::text(L"Username:     "),
 						usernameInput->Render()
 					) | ftxui::border | ftxui::color(ftxui::Color::White),
 
 
 					ftxui::hbox
 					(
-						ftxui::text(L"Email:     "),
+						ftxui::text(L"Email:        "),
 						emailInput->Render()
 					) | ftxui::border | ftxui::color(ftxui::Color::White),
 
 					ftxui::hbox
 					(
-						ftxui::text(L"Password:  "),
+						ftxui::text(L"Password*:    "),
 						passwordInput->Render()
 					) | ftxui::border | ftxui::color(ftxui::Color::White),
 
 					ftxui::hbox(
-						ftxui::text(L"Description:"),
+						ftxui::text(L"Description:  "),  
 						descriptionInput->Render()
 					) | ftxui::border | ftxui::color(ftxui::Color::White)
 

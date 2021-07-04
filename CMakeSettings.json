@@ -13,7 +13,7 @@
       "variables": [
         {
           "name": "CMAKE_TOOLCHAIN_FILE",
-          "value": "D:\\src\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake"
+          "value": "C:\\dev\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake"
         }
       ]
     }
