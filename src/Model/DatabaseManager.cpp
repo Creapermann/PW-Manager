@@ -7,11 +7,9 @@ int DatabaseManager::callback(void* data, int argc, char** argv, char** azColNam
 {
 	int i;
 
-	DatabaseManager::selectedInfo.clear();
-
 	for (i = 0; i < argc; i++)
 	{
-		DatabaseManager::selectedInfo.push_back(argv[i]);         // Pushes the requested information into a vector
+		DatabaseManager::selectedInfo.emplace_back(argv[i]);         // Pushes the requested information into a vector
 	}
 
 

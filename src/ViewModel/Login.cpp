@@ -3,6 +3,7 @@
 #include "../View/UI_Menu.h"
 
 #include "../Model/DatabaseManager.h"
+#include "Menu.h"
 #include "Model/User.h"
 #include "../Shared.h"
 
@@ -22,12 +23,18 @@ void Login::loginButtonClick()
 			 //Check if the user's password is the same as the one inputed
 			if (DatabaseManager::selectedInfo[0] == std::string(password.begin(), password.end()))
 			{
+				DatabaseManager::selectedInfo.clear();
 				// Set the global UserID
 				dbm.selectFromTable("SELECT ID from USERS WHERE EMAIL='" + std::string(email.begin(), email.end()) + "'");
 				user.UserID = dbm.selectedInfo[0];
 
 				DatabaseManager::selectedInfo.clear();   //clears selectedInfo again
+
+				Menu menu;
+
+				menu.getMenuEntries();
 				showMenuWindow();
+				
 			}
 		}
 		DatabaseManager::selectedInfo.clear();   //clears selectedInfo again

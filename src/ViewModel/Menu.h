@@ -4,6 +4,16 @@
 #include "../Model/FtxuiIncludes.h"
 #include "../Model/DatabaseManager.h"
 
+class Note
+{
+	std::wstring Title{ L"" };
+	std::wstring Username{ L"" };
+	std::wstring Email{ L"" };
+	std::wstring Password{ L"" };
+	std::wstring Description{ L"" };
+};
+
+
 
 class Menu
 {
@@ -22,6 +32,8 @@ public:
 	std::wstring newNoteEmail{L""};
 	std::wstring newNotePassword{L""};
 	std::wstring newNoteDescription{L""};
+
+	std::vector<std::wstring> notes;
 	
 
 public:
@@ -29,5 +41,5 @@ public:
 	void copyPasswordToClipboard();
 	
 	void createNewNote();
-	std::vector<std::wstring> getMenuEntries();
+	void getMenuEntries();
 };

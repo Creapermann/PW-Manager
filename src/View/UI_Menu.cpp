@@ -27,10 +27,9 @@ void showMenuWindow()
 	auto generatePasswordButton = ftxui::Button(L"Generate", [&] {menu.generatePassword(); }, false);
 	auto copyPasswordButton = ftxui::Button("Copy To Clipboard", [&] {menu.copyPasswordToClipboard(); }, false);
 
-	std::vector<std::wstring> entries = menu.getMenuEntries();
 	int selected = 0;
 
-	auto vaultMenu = ftxui::Menu(&entries, &selected);
+	auto vaultMenu = ftxui::Menu(&menu.notes, &selected);
 
 	// Container
 	auto container = ftxui::Container::Vertical({
