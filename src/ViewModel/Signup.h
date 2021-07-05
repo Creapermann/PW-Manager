@@ -14,6 +14,6 @@ public:
 	std::wstring confirmPassword;
 
 public:
-	void signupButtonClick(std::wstring firstname, std::wstring lastname, std::wstring email, std::wstring password, std::wstring confirmPassword);
+	void signupButtonClick();
 	void menuButtonClick();
 };

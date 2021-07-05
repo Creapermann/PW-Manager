@@ -10,7 +10,7 @@ void showSignupWindow()
 
 	// Components
 	auto menuButton = ftxui::Button(" <<  Back to menu", showStartWindow, true);
-	auto signupButton = ftxui::Button("Signup", [&] {signup.signupButtonClick(signup.firstname, signup.lastname, signup.email, signup.password, signup.confirmPassword);}, true);
+	auto signupButton = ftxui::Button("Signup", [&] {signup.signupButtonClick();}, true);
 
 	ftxui::Component firstnameInput = ftxui::Input(&signup.firstname, "First name");
 	ftxui::Component lastnameInput = ftxui::Input(&signup.lastname, "Last name");

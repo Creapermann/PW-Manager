@@ -8,9 +8,10 @@
 #include "../Shared.h"
 
 
-extern User user;
 
-
+/// <summary>
+/// Trys to login the user based on the provided data
+/// </summary>
 void Login::loginButtonClick()
 {
 	if (email.size() > 4 && password.size() >= 6)
@@ -24,6 +25,7 @@ void Login::loginButtonClick()
 			if (DatabaseManager::selectedInfo[0] == std::string(password.begin(), password.end()))
 			{
 				DatabaseManager::selectedInfo.clear();
+
 				// Set the global UserID
 				dbm.selectFromTable("SELECT ID from USERS WHERE EMAIL='" + std::string(email.begin(), email.end()) + "'");
 				user.UserID = dbm.selectedInfo[0];
@@ -51,5 +53,7 @@ void Login::loginButtonClick()
 }
 
 
-
+/// <summary>
+/// Menu button clikc event
+/// </summary>
 void Login::menuButtonClick() { showStartWindow(); }
