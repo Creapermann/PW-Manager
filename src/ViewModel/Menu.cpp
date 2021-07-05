@@ -32,9 +32,8 @@ void Menu::generatePassword()
 	// Error handling
 	if (length <= 0 || length >= 100)
 	{
-		length = 15;
 		//TODO: Error handling password to long
-		//return;
+		return;
 	}
 
 
@@ -60,11 +59,26 @@ void Menu::generatePassword()
 	if (includeNumbers)
 	{
 		// Adds all numbers from 1-9 x2
-		for (int i = 0; i <= 9; i++)
-		{
-			options.emplace_back(i);
-			options.emplace_back(i);
-		}
+		options.emplace_back('0');
+		options.emplace_back('0');
+		options.emplace_back('1');
+		options.emplace_back('1');
+		options.emplace_back('2');
+		options.emplace_back('2');
+		options.emplace_back('3');
+		options.emplace_back('3');
+		options.emplace_back('4');
+		options.emplace_back('4');
+		options.emplace_back('5');
+		options.emplace_back('5');
+		options.emplace_back('6');
+		options.emplace_back('6');
+		options.emplace_back('7');
+		options.emplace_back('7');
+		options.emplace_back('8');
+		options.emplace_back('8');
+		options.emplace_back('9');
+		options.emplace_back('9');
 	}
 	if (includeSymbols)
 	{
