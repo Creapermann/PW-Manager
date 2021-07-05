@@ -1,22 +1,25 @@
 #include "UI_Menu.h"
+
 #include "../View/UI_AddNote.h"
 
+#include "../Shared.h"
 
-extern ftxui::ScreenInteractive screen;
 
 
 void showMenuWindow()
 {
 	Menu menu;
-
+	
 	int size{ 60 };
 
 	// Components
 	auto settingsButton = ftxui::Button("(i)", [&] {; }, false);
 	auto newNoteButton = ftxui::Button("Add new note", showAddNoteWindow, true);
+	auto generatePasswordButton = ftxui::Button(L"Generate", [&] { menu.generatePassword(); }, false);
+	auto copyPasswordButton = ftxui::Button("Copy To Clipboard", [&] { menu.copyPasswordToClipboard(); }, false);
 
 
-	ftxui::Component passwordLengthInput = ftxui::Input(&menu.generatedPasswordLength, L"10");
+	ftxui::Component passwordLengthInput = ftxui::Input(&menu.generatedPasswordLength, L"0");
 
 
 	auto lowercaseCheckBox = ftxui::Checkbox(L"include lowercase (e.g. abcd)", &menu.lowercaseLetters);
@@ -24,19 +27,17 @@ void showMenuWindow()
 	auto numbersCheckBox = ftxui::Checkbox(L"include numbers   (e.g. 1234)", &menu.includeNumbers);
 	auto symbolsCheckBox = ftxui::Checkbox(L"include symbols   (e.g. @#$%)", &menu.includeSymbols);
 
-	auto generatePasswordButton = ftxui::Button(L"Generate", [&] {menu.generatePassword(); }, false);
-	auto copyPasswordButton = ftxui::Button("Copy To Clipboard", [&] {menu.copyPasswordToClipboard(); }, false);
 
+	// Contains the currently owned notes of the user
 	int selected = 0;
-	std::vector<std::wstring> entries = menu.getMenuEntries();
-	auto vaultMenu = ftxui::Menu(&entries, &selected);
-	//ftxui::MenuBase::From(vaultMenu)->
+	auto vaultMenu = ftxui::Menu(&menu.notes, &selected);
+
 
 	// Container
 	auto container = ftxui::Container::Vertical({
 			newNoteButton,
-			settingsButton,
 			vaultMenu,
+			settingsButton,
 			passwordLengthInput,
 			lowercaseCheckBox,
 			uppercaseCheckBox,
@@ -44,7 +45,7 @@ void showMenuWindow()
 			symbolsCheckBox,
 			generatePasswordButton,
 			copyPasswordButton
-		});
+	});
 
 
 
@@ -59,7 +60,7 @@ void showMenuWindow()
 						ftxui::hbox
 						(
 							// Title
-							ftxui::text(L"--- MY VAULT ---") | ftxui::hcenter,
+							ftxui::text(L"--- MY VAULT ---") | ftxui::center,
 							newNoteButton->Render()
 						),
 
@@ -140,18 +141,6 @@ void showMenuWindow()
 					) | ftxui::border | ftxui::flex
 				);
 		});
-	/*bool refresh_ui_continue = true;
-
-	std::thread refresh_ui([&] {
-		while (refresh_ui_continue) {
-			using namespace std::chrono_literals;
-			std::this_thread::sleep_for(0.05s);
-			menu.getMenuEntries();
-			screen.PostEvent(ftxui::Event::Custom);
-		}
-		});
-	refresh_ui_continue = false;
-	refresh_ui.join();*/
 
 	screen.Loop(renderer);
 }

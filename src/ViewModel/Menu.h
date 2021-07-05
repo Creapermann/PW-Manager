@@ -19,6 +19,7 @@ class Menu
 {
 
 public:
+	// Password generator
 	std::wstring generatedPasswordLength;
 	bool lowercaseLetters = true;
 	bool uppercaseLetters = true;
@@ -26,7 +27,7 @@ public:
 	bool includeSymbols = true;
 	std::wstring generatedPassword{L""};
 
-
+	// New notes
 	std::wstring newNoteTitle{L""};
 	std::wstring newNoteUsername{L""};
 	std::wstring newNoteEmail{L""};
@@ -41,5 +42,5 @@ public:
 	void copyPasswordToClipboard();
 	
 	void createNewNote();
-	std::vector<std::wstring> getMenuEntries();
+	void getUserNotes();
 };

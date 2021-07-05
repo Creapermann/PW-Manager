@@ -2,20 +2,24 @@
 
 #include "../Model/DatabaseManager.h"
 #include "../Model/User.h"
+
 #include "clip/clip.h"
-#include <cassert>
-#include <string>
+#include "../Shared.h"
 
-#include <vector>
-#include <iostream>
-#include <sstream>
-#include <random>
+
 #include <ctime>
+#include <iostream>
+#include <random>
+#include <sstream>
+#include <string>
+#include <vector>
 
 
-extern User user;
 
 
+/// <summary>
+/// Generates a random password based on certain settings
+/// </summary>
 void Menu::generatePassword()
 {
 	// Converts from wstring to int
@@ -24,94 +28,43 @@ void Menu::generatePassword()
 	ss >> length;
 	ss.clear();
 
-	if (length <= 0 || length >= 1000)
+
+	// Error handling
+	if (length <= 0 || length >= 100)
 	{
-		generatedPassword = L"";
-		return;
+		length = 15;
+		//TODO: Error handling password to long
+		//return;
 	}
 
-	std::vector<char> options{};
 
+	std::vector<char> options{};
+	
+	// Adds possible characters to a vector based on settings
 	if (lowercaseLetters)
 	{
-		options.emplace_back('a');
-		options.emplace_back('b');
-		options.emplace_back('c');
-		options.emplace_back('d');
-		options.emplace_back('e');
-		options.emplace_back('f');
-		options.emplace_back('g');
-		options.emplace_back('h');
-		options.emplace_back('i');
-		options.emplace_back('j');
-		options.emplace_back('k');
-		options.emplace_back('l');
-		options.emplace_back('m');
-		options.emplace_back('n');
-		options.emplace_back('o');
-		options.emplace_back('p');
-		options.emplace_back('q');
-		options.emplace_back('r');
-		options.emplace_back('s');
-		options.emplace_back('t');
-		options.emplace_back('u');
-		options.emplace_back('v');
-		options.emplace_back('w');
-		options.emplace_back('x');
-		options.emplace_back('y');
-		options.emplace_back('z');
+		// Adds all the chars from a-z
+		for (int i = 97; i <= 122; i++)
+		{
+			options.emplace_back(static_cast<char>(i));
+		}
 	}
 	if (uppercaseLetters)
 	{
-		options.emplace_back('A');
-		options.emplace_back('B');
-		options.emplace_back('C');
-		options.emplace_back('D');
-		options.emplace_back('E');
-		options.emplace_back('F');
-		options.emplace_back('G');
-		options.emplace_back('H');
-		options.emplace_back('I');
-		options.emplace_back('J');
-		options.emplace_back('K');
-		options.emplace_back('L');
-		options.emplace_back('M');
-		options.emplace_back('N');
-		options.emplace_back('O');
-		options.emplace_back('P');
-		options.emplace_back('Q');
-		options.emplace_back('R');
-		options.emplace_back('S');
-		options.emplace_back('T');
-		options.emplace_back('U');
-		options.emplace_back('V');
-		options.emplace_back('W');
-		options.emplace_back('X');
-		options.emplace_back('Y');
-		options.emplace_back('Z');
+		// Adds all the chars from A-Z
+		for (int i = 65; i <= 90; i++)
+		{
+			options.emplace_back(static_cast<char>(i));
+		}
 	}
 	if (includeNumbers)
 	{
-		options.emplace_back('0');
-		options.emplace_back('1');
-		options.emplace_back('2');
-		options.emplace_back('3');
-		options.emplace_back('4');
-		options.emplace_back('5');
-		options.emplace_back('6');
-		options.emplace_back('7');
-		options.emplace_back('8');
-		options.emplace_back('9');
-		options.emplace_back('0');
-		options.emplace_back('1');
-		options.emplace_back('2');
-		options.emplace_back('3');
-		options.emplace_back('4');
-		options.emplace_back('5');
-		options.emplace_back('6');
-		options.emplace_back('7');
-		options.emplace_back('8');
-		options.emplace_back('9');
+		// Adds all numbers from 1-9 x2
+		for (int i = 0; i <= 9; i++)
+		{
+			options.emplace_back(i);
+			options.emplace_back(i);
+		}
 	}
 	if (includeSymbols)
 	{
@@ -143,109 +96,115 @@ void Menu::generatePassword()
 		options.emplace_back('"');
 	}
 
+	// Error handling
+	if (options.size() <= 0)
+	{
+		//TODO: Error handling none of the boxes have been selected, at least 1 needs to be selected
+		generatedPassword = L"";
+		return;
+	}
 
+	// Generate a random password string by picking random indexes of the previously filled up vector of chars
 	std::default_random_engine randomNumGenerator(time(0));
 	std::uniform_int_distribution<int> rndm(0, options.size() - 1);
 
 	std::string tempPW;
-	
+
 	for (int i = 0; i < length; i++)
 	{	
 		tempPW += options[rndm(randomNumGenerator)];
 	}
 
+
 	generatedPassword = std::wstring(tempPW.begin(), tempPW.end());
 }
 
+
+/// <summary>
+/// Copies the password to the clipboard
+/// </summary>
 void Menu::copyPasswordToClipboard()
 {
+	// Copies the current password to the clipboard
 	clip::set_text(std::string(generatedPassword.begin(), generatedPassword.end()));
 }
 
 
-
+/// <summary>
+/// Creates a new note
+/// </summary>
 void Menu::createNewNote()
 {
-	DatabaseManager dbm;
-
-	// Gets all Notes of the user
-	dbm.selectFromTable("SELECT TITLE from NOTES WHERE PARENTID='" + user.UserID + "'");
-
-	// Checks if any of his already existing notes have the same name as the current one
-	bool noteWithSameNameAlreadyExists = false;
-	for (auto t : dbm.selectedInfo)
+	// Error Handling
+	if (newNotePassword == L"" || newNoteEmail == L"")
 	{
-		if (t == std::string(newNoteTitle.begin(), newNoteTitle.end()))
-		{
-			noteWithSameNameAlreadyExists = true;
-		}
-	}
-
-	// If no password was given
-	if (newNotePassword == L"")
-	{
-		// TODO: Error handling
+		// TODO: Not all needed data was provided
 		return;
 	}
 
-	// Insert the new note if the is no already existing note with the same name
-	if (noteWithSameNameAlreadyExists != true)
-	{
-		// Create/Open table
-		dbm.createTable("CREATE TABLE IF NOT EXISTS NOTES("
-			"PARENTID       TEXT          NOT NULL, "
-			"TITLE          TEXT		  NOT NULL, "
-			"USERNAME       TEXT          NOT NULL, "
-			"EMAIL          TEXT		  NOT NULL, "
-			"PASSWORD       TEXT		  NOT NULL, "
-			"DESCRIPTION    TEXT          NOT NULL); "
-		); 
-
-		   // Insert into db
-		dbm.insertIntoTable("INSERT INTO NOTES (PARENTID, TITLE, USERNAME, EMAIL, PASSWORD, DESCRIPTION) "
-			"VALUES"
-			"("
-			"'" + user.UserID + "', "  
-			"'" + std::string(newNoteTitle.begin(), newNoteTitle.end()) + "', "
-			"'" + std::string(newNoteUsername.begin(), newNoteUsername.end()) + "', "
-			"'" + std::string(newNoteEmail.begin(), newNoteEmail.end()) + "', "
-			"'" + std::string(newNotePassword.begin(), newNotePassword.end()) + "', "
-			"'" + std::string(newNoteDescription.begin(), newNoteDescription.end()) + "'"
-			" );");
-
-		getMenuEntries();
-	}
-	else
-	{
-		//TODO: Notename already exists error handling
-		;
-	}
-
-	DatabaseManager::selectedInfo.clear();
-}
-
-std::vector<std::wstring> Menu::getMenuEntries()
-{
 	DatabaseManager dbm;
+
+	// Create/Open table
 	dbm.createTable("CREATE TABLE IF NOT EXISTS NOTES("
 		"PARENTID       TEXT          NOT NULL, "
-		"TITLE          TEXT		  NOT NULL, "
+		"TITLE          TEXT		  NOT NULL         UNIQUE, "
 		"USERNAME       TEXT          NOT NULL, "
 		"EMAIL          TEXT		  NOT NULL, "
 		"PASSWORD       TEXT		  NOT NULL, "
 		"DESCRIPTION    TEXT          NOT NULL); "
 	);
 
+	// Insert the note into the db and checks if the insertion was sucessfull
+	if (dbm.insertIntoTable("INSERT INTO NOTES (PARENTID, TITLE, USERNAME, EMAIL, PASSWORD, DESCRIPTION) "
+		"VALUES"
+		"("
+		"'" + user.UserID + "', "
+		"'" + std::string(newNoteTitle.begin(), newNoteTitle.end()) + "', "
+		"'" + std::string(newNoteUsername.begin(), newNoteUsername.end()) + "', "
+		"'" + std::string(newNoteEmail.begin(), newNoteEmail.end()) + "', "
+		"'" + std::string(newNotePassword.begin(), newNotePassword.end()) + "', "
+		"'" + std::string(newNoteDescription.begin(), newNoteDescription.end()) + "'"
+		" );"))
+	{
+		// Adds the newly added note to the users note vector
+		getUserNotes();
+	}
+	else
+	{
+		// Error Handling note with the same name does already exist
+	}
 
+	
+
+	DatabaseManager::selectedInfo.clear();
+}
+
+
+/// <summary>
+/// Gets all the existing notes of the user and pushes them back into a vector
+/// </summary>
+void Menu::getUserNotes()
+{
+	// Creates the datatable if it doesnt exist
+	DatabaseManager dbm;
+	dbm.createTable("CREATE TABLE IF NOT EXISTS NOTES("
+		"PARENTID       TEXT          NOT NULL, "
+		"TITLE          TEXT		  NOT NULL        UNIQUE, "
+		"USERNAME       TEXT          NOT NULL, "
+		"EMAIL          TEXT		  NOT NULL, "
+		"PASSWORD       TEXT		  NOT NULL, "
+		"DESCRIPTION    TEXT          NOT NULL); "
+	);
+
+	// Gets all the notes
 	dbm.selectFromTable("SELECT TITLE from NOTES WHERE PARENTID='" + user.UserID + "'");
 
+	// Pushes all the notes back into a vector
 	std::vector<std::wstring> data;
 
-for (auto s : DatabaseManager::selectedInfo) {
+	for (auto s : DatabaseManager::selectedInfo) {
 		data.push_back(std::wstring(s.begin(), s.end()));
 	}
 
 	DatabaseManager::selectedInfo.clear();
-
-	return data;
 }

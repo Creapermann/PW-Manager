@@ -32,7 +32,7 @@ void Login::loginButtonClick()
 
 
 				Menu menu;
-				menu.getMenuEntries();
+				menu.getUserNotes();
 				showMenuWindow();
 				
 			}
