@@ -199,11 +199,10 @@ void Menu::getUserNotes()
 	// Gets all the notes
 	dbm.selectFromTable("SELECT TITLE from NOTES WHERE PARENTID='" + user.UserID + "'");
 
-	// Pushes all the notes back into a vector
-	std::vector<std::wstring> data;
 
+	// Pushes all the notes back into a vector
 	for (auto s : DatabaseManager::selectedInfo) {
-		data.push_back(std::wstring(s.begin(), s.end()));
+		notes.push_back(std::wstring(s.begin(), s.end()));
 	}
 
 	DatabaseManager::selectedInfo.clear();
