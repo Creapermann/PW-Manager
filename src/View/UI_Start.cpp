@@ -35,7 +35,8 @@ void showStartWindow() {
             showSignupWindow();
             break;
         case 2:
-            std::exit;
+            screen.ExitLoopClosure(); 
+            exit(0);
             break;
         }};
 
