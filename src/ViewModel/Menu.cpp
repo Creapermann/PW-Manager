@@ -197,7 +197,7 @@ void Menu::createNewNote()
 /// <summary>
 /// Gets all the existing notes of the user and pushes them back into a vector
 /// </summary>
-void Menu::getUserNotes()
+std::vector<std::wstring> Menu::getUserNotes()
 {
 	// Creates the datatable if it doesnt exist
 	DatabaseManager dbm;
@@ -210,14 +210,15 @@ void Menu::getUserNotes()
 		"DESCRIPTION    TEXT          NOT NULL); "
 	);
 
+	DatabaseManager::selectedInfo.clear();
 	// Gets all the notes
 	dbm.selectFromTable("SELECT TITLE from NOTES WHERE PARENTID='" + user.UserID + "'");
 
-
+	std::vector<std::wstring> data;
 	// Pushes all the notes back into a vector
 	for (auto s : DatabaseManager::selectedInfo) {
-		notes.push_back(std::wstring(s.begin(), s.end()));
+		data.push_back(std::wstring(s.begin(), s.end()));
 	}
 
-	DatabaseManager::selectedInfo.clear();
+	return data;
 }

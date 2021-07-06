@@ -42,5 +42,5 @@ public:
 	void copyPasswordToClipboard();
 	
 	void createNewNote();
-	void getUserNotes();
+	std::vector<std::wstring> getUserNotes();
 };

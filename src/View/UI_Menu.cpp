@@ -30,7 +30,8 @@ void showMenuWindow()
 
 	// Contains the currently owned notes of the user
 	int selected = 0;
-	auto vaultMenu = ftxui::Menu(&menu.notes, &selected);
+	std::vector<std::wstring> entries = menu.getUserNotes();
+	auto vaultMenu = ftxui::Menu(&entries, &selected);
 
 
 	// Container
