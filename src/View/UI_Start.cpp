@@ -36,7 +36,7 @@ void showStartWindow() {
             break;
         case 2:
             screen.ExitLoopClosure(); 
-            exit(0);
+            _Exit(0);
             break;
         }};
 
