@@ -1,6 +1,7 @@
 #include "UI_Menu.h"
 
-#include "../View/UI_AddNote.h"
+#include "UI_AddNote.h"
+#include "UI_Settings.h"
 
 #include "../Shared.h"
 
@@ -13,7 +14,7 @@ void showMenuWindow()
 	int size{ 60 };
 
 	// Components
-	auto settingsButton = ftxui::Button("(i)", [&] {; }, false);
+	auto settingsButton = ftxui::Button("(settings)", showSettingsWindow, false);
 	auto newNoteButton = ftxui::Button("Add new note", showAddNoteWindow, true);
 	auto generatePasswordButton = ftxui::Button(L"Generate", [&] { menu.generatePassword(); }, false);
 	auto copyPasswordButton = ftxui::Button("Copy To Clipboard", [&] { menu.copyPasswordToClipboard(); }, false);
@@ -33,6 +34,8 @@ void showMenuWindow()
 	std::vector<std::wstring> entries = menu.getUserNotes();
 	auto vaultMenu = ftxui::Menu(&entries, &selected);
 
+	ftxui::MenuBase::From(vaultMenu)->on_enter = [&] {};
+
 
 	// Container
 	auto container = ftxui::Container::Vertical({
@@ -47,6 +50,7 @@ void showMenuWindow()
 			generatePasswordButton,
 			copyPasswordButton
 	});
+
 
 
 
@@ -141,7 +145,7 @@ void showMenuWindow()
 
 					) | ftxui::border | ftxui::flex
 				);
-		});
+	});
 
 	screen.Loop(renderer);
 }

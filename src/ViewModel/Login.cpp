@@ -14,6 +14,13 @@
 /// </summary>
 void Login::loginButtonClick()
 {
+	// Early enter
+	/*Menu menu;
+	menu.getUserNotes();
+	showMenuWindow();*/
+
+	//return;
+
 	if (email.size() > 4 && password.size() >= 6)
 	{
 		DatabaseManager dbm;

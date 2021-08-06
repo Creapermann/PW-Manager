@@ -13,12 +13,6 @@ void showCreditsWindow()
 	auto dev1email = ftxui::Renderer([&] { return ftxui::text(L"     davidlazarescusc@gmail.com"); });
 	auto dev1Split = ftxui::ResizableSplitLeft(dev1name, dev1email, &dev1RightSize);
 
-	int dev2RightSize = 20;
-	auto dev2name = ftxui::Renderer([&] { return ftxui::text(L"Ahmed Mostafa"); });
-	auto dev2email = ftxui::Renderer([&] { return ftxui::text(L"     amk67482@gmail.com"); });
-	auto dev2Split = ftxui::ResizableSplitLeft(dev2name, dev2email, &dev2RightSize);
-
-
 	auto menuButton = ftxui::Button("<< Back to menu", showStartWindow, true);
 
 
@@ -56,7 +50,7 @@ void showCreditsWindow()
 						(
 							ftxui::hbox
 							(
-								ftxui::text(L"Developers:") | ftxui::color(ftxui::Color::White)  | ftxui::hcenter | ftxui::bold
+								ftxui::text(L"Developer:") | ftxui::color(ftxui::Color::White)  | ftxui::hcenter | ftxui::bold
 							),
 
 							ftxui::vbox
@@ -75,14 +69,7 @@ void showCreditsWindow()
 
 
 								// Spacing
-								ftxui::hbox() | ftxui::size(ftxui::HEIGHT, ftxui::GREATER_THAN, 1),
-
-								// Developer 2
-								ftxui::hbox
-								(
-									dev2Split->Render() | ftxui::center
-								) | ftxui::border | ftxui::color(ftxui::Color::White)
-
+								ftxui::hbox() | ftxui::size(ftxui::HEIGHT, ftxui::GREATER_THAN, 1)
 
 							)
 						)

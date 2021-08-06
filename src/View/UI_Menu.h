@@ -4,6 +4,5 @@
 #include "../ViewModel/Menu.h"
 #include "../Model/ProgramInfo.h"
 
-#include <thread>
 
 void showMenuWindow();
