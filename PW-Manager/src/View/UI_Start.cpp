@@ -10,7 +10,9 @@
 void showStartWindow() {
 
     // Components
-    auto creditsButton = ftxui::Button(" credits ", [&] { showCreditsWindow(); });
+    ftxui::ButtonOption creditsOptions;
+    creditsOptions.border = false;
+    auto creditsButton = ftxui::Button(" credits ", [&] { showCreditsWindow(); }, creditsOptions);
 
     // Menu
     std::vector<std::wstring> entries = {
@@ -43,15 +45,15 @@ void showStartWindow() {
 
     option.style_focused = ftxui::bgcolor(ftxui::Color::Blue);
 
-    auto menu = ftxui::Menu(&entries, &selected);
+    auto menu = ftxui::Menu(&entries, &selected, option);
 
 
     // Container
     ftxui::Component container = ftxui::Container::Vertical(
-        {
-            menu,
-            creditsButton
-        });
+    {
+        menu,
+        creditsButton
+    });
 
     auto renderer = ftxui::Renderer(container, [&] {
         return ftxui::vbox
@@ -82,8 +84,7 @@ void showStartWindow() {
                                         | ftxui::align_right | ftxui::color(ftxui::Color::Gold3)
             )
         );
+    });
 
-
-        });
     screen.Loop(renderer);
 }
