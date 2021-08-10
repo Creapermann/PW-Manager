@@ -1,0 +1,27 @@
+﻿  Main.cpp
+  DatabaseManager.cpp
+  UI_AddNote.cpp
+  UI_Credits.cpp
+  UI_EditNote.cpp
+  UI_Login.cpp
+  UI_Menu.cpp
+  UI_Settings.cpp
+  UI_Signup.cpp
+  UI_Start.cpp
+  Generating Code...
+UI_Settings.obj : error LNK2001: unresolved external symbol "class std::function<class std::shared_ptr<class ftxui::Node> __cdecl(class std::shared_ptr<class ftxui::Node>)> __cdecl ftxui::color(class ftxui::Color)" (?color@ftxui@@YA?AV?$function@$$A6A?AV?$shared_ptr@VNode@ftxui@@@std@@V12@@Z@std@@VColor@1@@Z)
+UI_Signup.obj : error LNK2001: unresolved external symbol "class std::function<class std::shared_ptr<class ftxui::Node> __cdecl(class std::shared_ptr<class ftxui::Node>)> __cdecl ftxui::color(class ftxui::Color)" (?color@ftxui@@YA?AV?$function@$$A6A?AV?$shared_ptr@VNode@ftxui@@@std@@V12@@Z@std@@VColor@1@@Z)
+UI_Start.obj : error LNK2001: unresolved external symbol "class std::function<class std::shared_ptr<class ftxui::Node> __cdecl(class std::shared_ptr<class ftxui::Node>)> __cdecl ftxui::color(class ftxui::Color)" (?color@ftxui@@YA?AV?$function@$$A6A?AV?$shared_ptr@VNode@ftxui@@@std@@V12@@Z@std@@VColor@1@@Z)
+UI_AddNote.obj : error LNK2001: unresolved external symbol "class std::function<class std::shared_ptr<class ftxui::Node> __cdecl(class std::shared_ptr<class ftxui::Node>)> __cdecl ftxui::color(class ftxui::Color)" (?color@ftxui@@YA?AV?$function@$$A6A?AV?$shared_ptr@VNode@ftxui@@@std@@V12@@Z@std@@VColor@1@@Z)
+UI_Credits.obj : error LNK2001: unresolved external symbol "class std::function<class std::shared_ptr<class ftxui::Node> __cdecl(class std::shared_ptr<class ftxui::Node>)> __cdecl ftxui::color(class ftxui::Color)" (?color@ftxui@@YA?AV?$function@$$A6A?AV?$shared_ptr@VNode@ftxui@@@std@@V12@@Z@std@@VColor@1@@Z)
+UI_Login.obj : error LNK2001: unresolved external symbol "class std::function<class std::shared_ptr<class ftxui::Node> __cdecl(class std::shared_ptr<class ftxui::Node>)> __cdecl ftxui::color(class ftxui::Color)" (?color@ftxui@@YA?AV?$function@$$A6A?AV?$shared_ptr@VNode@ftxui@@@std@@V12@@Z@std@@VColor@1@@Z)
+UI_Menu.obj : error LNK2001: unresolved external symbol "class std::function<class std::shared_ptr<class ftxui::Node> __cdecl(class std::shared_ptr<class ftxui::Node>)> __cdecl ftxui::color(class ftxui::Color)" (?color@ftxui@@YA?AV?$function@$$A6A?AV?$shared_ptr@VNode@ftxui@@@std@@V12@@Z@std@@VColor@1@@Z)
+UI_AddNote.obj : error LNK2019: unresolved external symbol "public: void __thiscall Menu::createNewNote(void)" (?createNewNote@Menu@@QAEXXZ) referenced in function "public: __thiscall `void __cdecl showAddNoteWindow(void)'::`2'::<lambda_1>::operator()(void)const " (??R<lambda_1>@?1??showAddNoteWindow@@YAXXZ@QBE@XZ)
+UI_Login.obj : error LNK2019: unresolved external symbol "public: void __thiscall Login::loginButtonClick(void)" (?loginButtonClick@Login@@QAEXXZ) referenced in function "public: __thiscall `void __cdecl showLoginWindow(void)'::`2'::<lambda_1>::operator()(void)const " (??R<lambda_1>@?1??showLoginWindow@@YAXXZ@QBE@XZ)
+UI_Menu.obj : error LNK2019: unresolved external symbol "class std::function<class std::shared_ptr<class ftxui::Node> __cdecl(class std::shared_ptr<class ftxui::Node>)> __cdecl ftxui::bgcolor(class ftxui::Color)" (?bgcolor@ftxui@@YA?AV?$function@$$A6A?AV?$shared_ptr@VNode@ftxui@@@std@@V12@@Z@std@@VColor@1@@Z) referenced in function "public: __thiscall `void __cdecl showMenuWindow(void)'::`2'::<lambda_4>::operator()(void)const " (??R<lambda_4>@?1??showMenuWindow@@YAXXZ@QBE@XZ)
+UI_Start.obj : error LNK2001: unresolved external symbol "class std::function<class std::shared_ptr<class ftxui::Node> __cdecl(class std::shared_ptr<class ftxui::Node>)> __cdecl ftxui::bgcolor(class ftxui::Color)" (?bgcolor@ftxui@@YA?AV?$function@$$A6A?AV?$shared_ptr@VNode@ftxui@@@std@@V12@@Z@std@@VColor@1@@Z)
+UI_Menu.obj : error LNK2019: unresolved external symbol "public: void __thiscall Menu::generatePassword(void)" (?generatePassword@Menu@@QAEXXZ) referenced in function "public: __thiscall `void __cdecl showMenuWindow(void)'::`2'::<lambda_1>::operator()(void)const " (??R<lambda_1>@?1??showMenuWindow@@YAXXZ@QBE@XZ)
+UI_Menu.obj : error LNK2019: unresolved external symbol "public: void __thiscall Menu::copyPasswordToClipboard(void)" (?copyPasswordToClipboard@Menu@@QAEXXZ) referenced in function "public: __thiscall `void __cdecl showMenuWindow(void)'::`2'::<lambda_2>::operator()(void)const " (??R<lambda_2>@?1??showMenuWindow@@YAXXZ@QBE@XZ)
+UI_Menu.obj : error LNK2019: unresolved external symbol "public: class std::vector<class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >,class std::allocator<class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> > > > __thiscall Menu::getUserNotes(void)" (?getUserNotes@Menu@@QAE?AV?$vector@V?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@V?$allocator@V?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@@2@@std@@XZ) referenced in function "void __cdecl showMenuWindow(void)" (?showMenuWindow@@YAXXZ)
+UI_Signup.obj : error LNK2019: unresolved external symbol "public: void __thiscall Signup::signupButtonClick(void)" (?signupButtonClick@Signup@@QAEXXZ) referenced in function "public: __thiscall `void __cdecl showSignupWindow(void)'::`2'::<lambda_1>::operator()(void)const " (??R<lambda_1>@?1??showSignupWindow@@YAXXZ@QBE@XZ)
+C:\Users\Creap\Data\Programming\C++\Projects\PW-Manager\Debug\PW-Manager.exe : fatal error LNK1120: 8 unresolved externals
