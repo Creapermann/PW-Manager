@@ -13,7 +13,7 @@ void showLoginWindow()
 	// Components
 	ftxui::ButtonOption menuButtonOption;
 	menuButtonOption.border = true;
-	auto menuButton = ftxui::Button(" <<  Back to menu", showStartWindow, menuButtonOption);
+	auto menuButton = ftxui::Button(" <<  Back  ", showStartWindow, menuButtonOption);
 
 	ftxui::ButtonOption loginButtonOption;
 	loginButtonOption.border = true;
@@ -21,7 +21,10 @@ void showLoginWindow()
 
 
 	ftxui::Component emailInput = ftxui::Input(&login.email, "someone@example.com");
-	ftxui::Component passwordInput = ftxui::Input(&login.password, "********");
+	
+	ftxui::InputOption passwordInputOption;
+	passwordInputOption.password = true;
+	ftxui::Component passwordInput = ftxui::Input(&login.password, "********", passwordInputOption);
 
 
 	// Container

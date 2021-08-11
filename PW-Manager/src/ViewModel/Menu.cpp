@@ -3,7 +3,7 @@
 #include "../Model/DatabaseManager.h"
 #include "../Model/User.h"
 
-//#include "clip/clip.h"
+//#include "clip/clip.h" 
 #include "../Shared.h"
 
 
@@ -135,8 +135,8 @@ void Menu::generatePassword()
 
 
 /// <summary>
-/// Copies the password to the clipboard
-/// </summary>
+ //Copies the password to the clipboard
+ //</summary>
 //void Menu::copyPasswordToClipboard()
 //{
 //	// Copies the current password to the clipboard
@@ -211,14 +211,34 @@ std::vector<std::wstring> Menu::getUserNotes()
 	);
 
 	DatabaseManager::selectedInfo.clear();
-	// Gets all the notes
-	dbm.selectFromTable("SELECT TITLE from NOTES WHERE PARENTID='" + user.UserID + "'");
 
-	std::vector<std::wstring> data;
+
+	// Gets all the names of the notes
+	dbm.selectFromTable("SELECT TITLE from NOTES WHERE PARENTID='" + user.UserID + "'");
+	std::vector<std::wstring> tempNamesVec;
 	// Pushes all the notes back into a vector
 	for (auto s : DatabaseManager::selectedInfo) {
-		data.push_back(std::wstring(s.begin(), s.end()));
+		tempNamesVec.emplace_back(s.begin(), s.end());
 	}
 
-	return data;
+
+	// Makes Note objects from the names and push it into a vector
+	for (std::wstring title : tempNamesVec)
+	{
+		DatabaseManager::selectedInfo.clear();
+		dbm.selectFromTable("SELECT * from NOTES WHERE TITLE='" + std::string(title.begin(), title.end()) + "'");
+
+		Note note;
+		note.parentID	 = std::wstring(DatabaseManager::selectedInfo[0].begin(), DatabaseManager::selectedInfo[0].end());
+		note.title       = std::wstring(DatabaseManager::selectedInfo[1].begin(), DatabaseManager::selectedInfo[1].end());
+		note.username    = std::wstring(DatabaseManager::selectedInfo[2].begin(), DatabaseManager::selectedInfo[2].end());
+		note.email       = std::wstring(DatabaseManager::selectedInfo[3].begin(), DatabaseManager::selectedInfo[3].end());
+		note.password    = std::wstring(DatabaseManager::selectedInfo[4].begin(), DatabaseManager::selectedInfo[4].end());
+		note.description = std::wstring(DatabaseManager::selectedInfo[5].begin(), DatabaseManager::selectedInfo[5].end());
+
+		userNotes.emplace_back(std::move(note));
+	}
+
+
+	return tempNamesVec;
 }

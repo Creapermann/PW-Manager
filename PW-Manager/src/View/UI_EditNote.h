@@ -1,6 +1,7 @@
 #pragma once
 
+#include "../Model/Note.h"
 
 
 
-void showEditNoteWindow();
+void showEditNoteWindow(Note& note);

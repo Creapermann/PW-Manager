@@ -3,15 +3,7 @@
 #include <string>
 #include "../Model/FtxuiIncludes.h"
 #include "../Model/DatabaseManager.h"
-
-class Note
-{
-	std::wstring Title{ L"" };
-	std::wstring Username{ L"" };
-	std::wstring Email{ L"" };
-	std::wstring Password{ L"" };
-	std::wstring Description{ L"" };
-};
+#include "../Model/Note.h"
 
 
 
@@ -34,10 +26,10 @@ public:
 	std::wstring newNotePassword{L""};
 	std::wstring newNoteDescription{L""};
 
-	std::vector<std::wstring> notes;
-	
 
 public:
+	std::vector<Note> userNotes;
+
 	void generatePassword();
 	void copyPasswordToClipboard();
 	
