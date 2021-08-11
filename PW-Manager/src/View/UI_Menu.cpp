@@ -1,8 +1,10 @@
 #include "UI_Menu.h"
 
 #include "UI_AddNote.h"
-#include "UI_Settings.h"
+#include "UI_MenuSettings.h"
 #include "UI_EditNote.h"
+
+#include "../Model/CopyToClipboard.h"
 
 #include "../Shared.h"
 
@@ -17,7 +19,7 @@ void showMenuWindow()
 	// Components
 	ftxui::ButtonOption settingsButtonOption;
 	settingsButtonOption.border = false;
-	auto settingsButton = ftxui::Button("(settings)", showSettingsWindow, settingsButtonOption);
+	auto settingsButton = ftxui::Button("(settings)", showMenuSettingsWindow, settingsButtonOption);
 
 	ftxui::ButtonOption newNoteButtonOption;
 	newNoteButtonOption.border = true;
@@ -29,7 +31,8 @@ void showMenuWindow()
 
 	ftxui::ButtonOption copyPwButtonOption;
 	copyPwButtonOption.border = false;
-	auto copyPasswordButton = ftxui::Button("Copy To Clipboard", [&] { /*menu.copyPasswordToClipboard()*/; }, copyPwButtonOption);
+	auto copyPasswordButton = ftxui::Button("Copy To Clipboard", [&] { copyToClipboard(std::string(menu.generatedPassword.begin(), 
+		menu.generatedPassword.end())); }, copyPwButtonOption);
 
 
 	ftxui::Component passwordLengthInput = ftxui::Input(&menu.generatedPasswordLength, L"0");

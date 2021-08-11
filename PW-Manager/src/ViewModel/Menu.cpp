@@ -3,9 +3,10 @@
 #include "../Model/DatabaseManager.h"
 #include "../Model/User.h"
 
-//#include "clip/clip.h" 
+#include "../Model/CopyToClipboard.h"
 #include "../Shared.h"
 
+#include "clip/clip.h"
 
 #include <ctime>
 #include <iostream>
@@ -135,16 +136,6 @@ void Menu::generatePassword()
 
 
 /// <summary>
- //Copies the password to the clipboard
- //</summary>
-//void Menu::copyPasswordToClipboard()
-//{
-//	// Copies the current password to the clipboard
-//	clip::set_text(std::string(generatedPassword.begin(), generatedPassword.end()));
-//}
-
-
-/// <summary>
 /// Creates a new note
 /// </summary>
 void Menu::createNewNote()
@@ -216,8 +207,10 @@ std::vector<std::wstring> Menu::getUserNotes()
 	// Gets all the names of the notes
 	dbm.selectFromTable("SELECT TITLE from NOTES WHERE PARENTID='" + user.UserID + "'");
 	std::vector<std::wstring> tempNamesVec;
+	
 	// Pushes all the notes back into a vector
-	for (auto s : DatabaseManager::selectedInfo) {
+	for (auto s : DatabaseManager::selectedInfo) 
+	{
 		tempNamesVec.emplace_back(s.begin(), s.end());
 	}
 

@@ -1,4 +1,4 @@
-#include "UI_Settings.h"
+#include "UI_MenuSettings.h"
 #include "UI_Start.h"
 #include "UI_Menu.h"
 
@@ -9,7 +9,7 @@
 
 
 
-void showSettingsWindow()
+void showMenuSettingsWindow()
 {
 	// Components
 	auto logOutButton = ftxui::Button("Logout", showStartWindow);

@@ -1,7 +1,11 @@
 #include "UI_EditNote.h"
+#include "UI_NoteSettings.h"
+
 #include "../Model/FtxuiIncludes.h"
 
 #include "../Shared.h"
+
+#include "../Model/CopyToClipboard.h"
 
 #include "../ViewModel/Edit.h"
 #include "../View/UI_Menu.h"
@@ -20,6 +24,10 @@ void showEditNoteWindow(Note& note)
 	edit.editedDescription = note.description;
 
 	// Components
+	ftxui::ButtonOption settingsButtonOption;
+	settingsButtonOption.border = false;
+	auto settingsButton = ftxui::Button("(settings)", showNoteSettingsWindow, settingsButtonOption);
+
 	auto title = ftxui::Input(&edit.editedTitle, "");
 	auto username = ftxui::Input(&edit.editedUsername, "");
 	auto email = ftxui::Input(&edit.editedEmail, "");
@@ -29,7 +37,8 @@ void showEditNoteWindow(Note& note)
 
 	ftxui::ButtonOption copyPasswordButtonOption;
 	copyPasswordButtonOption.border = false;
-	auto copyPasswordButton = ftxui::Button("copy", [&]() { ; }, copyPasswordButtonOption);
+	auto copyPasswordButton = ftxui::Button("copy", [&] { copyToClipboard(std::string(edit.editedPassword.begin(), 
+		edit.editedPassword.end())); }, copyPasswordButtonOption);
 
 	ftxui::ButtonOption saveButtonOption;
 	saveButtonOption.border = true;
@@ -43,6 +52,7 @@ void showEditNoteWindow(Note& note)
 	// Container
 	auto container = ftxui::Container::Vertical(
 	{
+		settingsButton,
 		title,
 		username,
 		email,
@@ -61,10 +71,18 @@ void showEditNoteWindow(Note& note)
 				ftxui::vbox
 				(
 					// Header
-					ftxui::hbox(
-						ftxui::text(L"Edit note") | ftxui::flex | ftxui::hcenter | ftxui::color(ftxui::Color::Green)
+					ftxui::hbox
+					(
+						ftxui::text(L"               "),
 
-					) | ftxui::border | ftxui::hcenter,
+						ftxui::hbox
+						(
+							ftxui::text(L"Edit note") | ftxui::flex | ftxui::hcenter | ftxui::color(ftxui::Color::Green)
+						) | ftxui::border | ftxui::hcenter | ftxui::xflex_grow,
+						
+						settingsButton->Render() | ftxui::vcenter,
+						ftxui::text(L"  ")
+					),
 
 					//Main content
 					ftxui::vbox

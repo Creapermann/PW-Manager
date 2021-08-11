@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\Model\CopyToClipboard.cpp" />
     <ClCompile Include="src\Model\DatabaseManager.cpp" />
     <ClCompile Include="src\Model\Note.cpp" />
     <ClCompile Include="src\ViewModel\Edit.cpp" />
@@ -31,11 +32,13 @@
     <ClCompile Include="src\View\UI_EditNote.cpp" />
     <ClCompile Include="src\View\UI_Login.cpp" />
     <ClCompile Include="src\View\UI_Menu.cpp" />
-    <ClCompile Include="src\View\UI_Settings.cpp" />
+    <ClCompile Include="src\View\UI_MenuSettings.cpp" />
+    <ClCompile Include="src\View\UI_NoteSettings.cpp" />
     <ClCompile Include="src\View\UI_Signup.cpp" />
     <ClCompile Include="src\View\UI_Start.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Model\CopyToClipboard.h" />
     <ClInclude Include="src\Model\DatabaseManager.h" />
     <ClInclude Include="src\Model\FtxuiIncludes.h" />
     <ClInclude Include="src\Model\Note.h" />
@@ -51,7 +54,8 @@
     <ClInclude Include="src\View\UI_EditNote.h" />
     <ClInclude Include="src\View\UI_Login.h" />
     <ClInclude Include="src\View\UI_Menu.h" />
-    <ClInclude Include="src\View\UI_Settings.h" />
+    <ClInclude Include="src\View\UI_MenuSettings.h" />
+    <ClInclude Include="src\View\UI_NoteSettings.h" />
     <ClInclude Include="src\View\UI_Signup.h" />
     <ClInclude Include="src\View\UI_Start.h" />
   </ItemGroup>
@@ -133,7 +137,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)Deps\CLIP\src;$(SolutionDir)Deps\SQL\src;$(SolutionDir)Deps\FTXUI\src</AdditionalLibraryDirectories>
-      <AdditionalDependencies>clip.lib;zz_SQL.lib;ftxui-screen.lib;ftxui-dom.lib;ftxui-component.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>shlwapi.lib;clip.lib;zz_SQL.lib;ftxui-screen.lib;ftxui-dom.lib;ftxui-component.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -154,7 +158,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)Deps\CLIP\src;$(SolutionDir)Deps\SQL\src;$(SolutionDir)Deps\FTXUI\src</AdditionalLibraryDirectories>
-      <AdditionalDependencies>clip.lib;zz_SQL.lib;ftxui-screen.lib;ftxui-dom.lib;ftxui-component.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>shlwapi.lib;clip.lib;zz_SQL.lib;ftxui-screen.lib;ftxui-dom.lib;ftxui-component.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -171,7 +175,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)Deps\CLIP\src;$(SolutionDir)Deps\SQL\src;$(SolutionDir)Deps\FTXUI\src</AdditionalLibraryDirectories>
-      <AdditionalDependencies>clip.lib;zz_SQL.lib;ftxui-screen.lib;ftxui-dom.lib;ftxui-component.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>shlwapi.lib;clip.lib;zz_SQL.lib;ftxui-screen.lib;ftxui-dom.lib;ftxui-component.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -192,7 +196,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)Deps\CLIP\src;$(SolutionDir)Deps\SQL\src;$(SolutionDir)Deps\FTXUI\src</AdditionalLibraryDirectories>
-      <AdditionalDependencies>clip.lib;zz_SQL.lib;ftxui-screen.lib;ftxui-dom.lib;ftxui-component.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>shlwapi.lib;clip.lib;zz_SQL.lib;ftxui-screen.lib;ftxui-dom.lib;ftxui-component.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
