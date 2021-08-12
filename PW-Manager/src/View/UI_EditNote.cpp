@@ -1,5 +1,5 @@
 #include "UI_EditNote.h"
-#include "UI_NoteSettings.h"
+#include "UI_ConfirmDelete.h"
 
 #include "../Model/FtxuiIncludes.h"
 
@@ -24,10 +24,10 @@ void showEditNoteWindow(Note& note)
 	edit.editedDescription = note.description;
 
 	// Components
-	ftxui::ButtonOption settingsButtonOption;
-	settingsButtonOption.border = false;
-	auto settingsButton = ftxui::Button("(settings)", showNoteSettingsWindow, settingsButtonOption);
-
+	ftxui::ButtonOption deleteNoteButtonOption;
+	deleteNoteButtonOption.border = true;
+	auto deleteNoteButton = ftxui::Button("Delete note", [&]() { showConfirmDeleteWindow(note); }, deleteNoteButtonOption);
+	
 	auto title = ftxui::Input(&edit.editedTitle, "");
 	auto username = ftxui::Input(&edit.editedUsername, "");
 	auto email = ftxui::Input(&edit.editedEmail, "");
@@ -52,7 +52,6 @@ void showEditNoteWindow(Note& note)
 	// Container
 	auto container = ftxui::Container::Vertical(
 	{
-		settingsButton,
 		title,
 		username,
 		email,
@@ -61,7 +60,8 @@ void showEditNoteWindow(Note& note)
 		description,
 		
 		saveButton,
-		cancelButton
+		cancelButton,
+		deleteNoteButton
 	});
 
 
@@ -73,16 +73,8 @@ void showEditNoteWindow(Note& note)
 					// Header
 					ftxui::hbox
 					(
-						ftxui::text(L"               "),
-
-						ftxui::hbox
-						(
-							ftxui::text(L"Edit note") | ftxui::flex | ftxui::hcenter | ftxui::color(ftxui::Color::Green)
-						) | ftxui::border | ftxui::hcenter | ftxui::xflex_grow,
-						
-						settingsButton->Render() | ftxui::vcenter,
-						ftxui::text(L"  ")
-					),
+						ftxui::text(L"Edit note") | ftxui::flex | ftxui::hcenter | ftxui::color(ftxui::Color::Green)
+					) | ftxui::border | ftxui::hcenter,
 
 					//Main content
 					ftxui::vbox
@@ -132,9 +124,18 @@ void showEditNoteWindow(Note& note)
 						ftxui::text(" ")
 
 					) | ftxui::border | ftxui::color(ftxui::Color::GrayDark),
-					
-					saveButton->Render() | ftxui::center,
-					cancelButton->Render() | ftxui::center
+
+
+					ftxui::text(L" "),
+
+					ftxui::hbox
+					(
+						saveButton->Render(),
+						ftxui::text(L" "),
+						cancelButton->Render(),
+						ftxui::text(L"                                                                                    "),
+						deleteNoteButton->Render() | ftxui::color(ftxui::Color::Red)
+					)
 				);
 		});
 

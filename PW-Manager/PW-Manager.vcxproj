@@ -28,12 +28,12 @@
     <ClCompile Include="src\ViewModel\Menu.cpp" />
     <ClCompile Include="src\ViewModel\Signup.cpp" />
     <ClCompile Include="src\View\UI_AddNote.cpp" />
+    <ClCompile Include="src\View\UI_ConfirmDelete.cpp" />
     <ClCompile Include="src\View\UI_Credits.cpp" />
     <ClCompile Include="src\View\UI_EditNote.cpp" />
     <ClCompile Include="src\View\UI_Login.cpp" />
     <ClCompile Include="src\View\UI_Menu.cpp" />
     <ClCompile Include="src\View\UI_MenuSettings.cpp" />
-    <ClCompile Include="src\View\UI_NoteSettings.cpp" />
     <ClCompile Include="src\View\UI_Signup.cpp" />
     <ClCompile Include="src\View\UI_Start.cpp" />
   </ItemGroup>
@@ -50,12 +50,12 @@
     <ClInclude Include="src\ViewModel\Menu.h" />
     <ClInclude Include="src\ViewModel\Signup.h" />
     <ClInclude Include="src\View\UI_AddNote.h" />
+    <ClInclude Include="src\View\UI_ConfirmDelete.h" />
     <ClInclude Include="src\View\UI_Credits.h" />
     <ClInclude Include="src\View\UI_EditNote.h" />
     <ClInclude Include="src\View\UI_Login.h" />
     <ClInclude Include="src\View\UI_Menu.h" />
     <ClInclude Include="src\View\UI_MenuSettings.h" />
-    <ClInclude Include="src\View\UI_NoteSettings.h" />
     <ClInclude Include="src\View\UI_Signup.h" />
     <ClInclude Include="src\View\UI_Start.h" />
   </ItemGroup>
