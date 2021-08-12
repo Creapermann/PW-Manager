@@ -141,18 +141,32 @@ void Menu::generatePassword()
 void Menu::createNewNote()
 {
 	// Error Handling
-	if (newNotePassword == L"" || newNoteEmail == L"")
+	if (newNotePassword == L"" || newNoteTitle == L"")
 	{
 		// TODO: Not all needed data was provided
 		return;
 	}
-
+	
 	DatabaseManager dbm;
+
+	DatabaseManager::selectedInfo.clear();
+
+	// CHeck if the user already has a note with the same name
+	std::string query = "SELECT TITLE FROM NOTES WHERE TITLE = '" + std::string(newNoteTitle.begin(), newNoteTitle.end()) + 
+		"' AND PARENTID = '" + user.UserID + "'";
+	dbm.selectFromTable(query);
+
+	if (!DatabaseManager::selectedInfo.empty())
+		return;
+
+	DatabaseManager::selectedInfo.clear();
+
+
 
 	// Create/Open table
 	dbm.createTable("CREATE TABLE IF NOT EXISTS NOTES("
 		"PARENTID       TEXT          NOT NULL, "
-		"TITLE          TEXT		  NOT NULL         UNIQUE, "
+		"TITLE          TEXT		  NOT NULL  "
 		"USERNAME       TEXT          NOT NULL, "
 		"EMAIL          TEXT		  NOT NULL, "
 		"PASSWORD       TEXT		  NOT NULL, "
@@ -194,7 +208,7 @@ std::vector<std::wstring> Menu::getUserNotes()
 	DatabaseManager dbm;
 	dbm.createTable("CREATE TABLE IF NOT EXISTS NOTES("
 		"PARENTID       TEXT          NOT NULL, "
-		"TITLE          TEXT		  NOT NULL        UNIQUE, "
+		"TITLE          TEXT		  NOT NULL, "
 		"USERNAME       TEXT          NOT NULL, "
 		"EMAIL          TEXT		  NOT NULL, "
 		"PASSWORD       TEXT		  NOT NULL, "
