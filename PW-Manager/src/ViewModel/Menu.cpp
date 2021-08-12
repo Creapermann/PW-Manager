@@ -6,8 +6,6 @@
 #include "../Model/CopyToClipboard.h"
 #include "../Shared.h"
 
-#include "clip/clip.h"
-
 #include <ctime>
 #include <iostream>
 #include <random>

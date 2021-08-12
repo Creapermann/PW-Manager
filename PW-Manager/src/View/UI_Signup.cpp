@@ -4,9 +4,16 @@
 #include "../Shared.h"
 
 
+#include <string>
+
+
 void showSignupWindow()
 {
 	Signup signup;
+
+
+	// Error-Handling
+	std::wstring e_first;
 
 	// Components
 	ftxui::ButtonOption menuButtonOption;
@@ -16,7 +23,7 @@ void showSignupWindow()
 
 	ftxui::ButtonOption signupButtonOption;
 	signupButtonOption.border = true;
-	auto signupButton = ftxui::Button("Signup", [&] {signup.signupButtonClick();});
+	auto signupButton = ftxui::Button("Signup", [&] {signup.signupButtonClick(e_first);});
 
 	ftxui::Component firstnameInput = ftxui::Input(&signup.firstname, "First name");
 	ftxui::Component lastnameInput = ftxui::Input(&signup.lastname, "Last name");
@@ -86,6 +93,10 @@ void showSignupWindow()
 							ftxui::text(L"Confirm Password:  "),
 							confirmPasswordInput->Render() /* | ftxui::color(ftxui::Color::Black)*/
 						) | ftxui::border | ftxui::color(ftxui::Color::White),
+
+						ftxui::text(L" " + e_first) | ftxui::color(ftxui::Color::Red),
+						ftxui::text(L""),
+
 						ftxui::hbox(
 							signupButton->Render()
 						) | ftxui::center | ftxui::color(ftxui::Color::White)

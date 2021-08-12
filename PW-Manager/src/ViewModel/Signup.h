@@ -3,6 +3,8 @@
 #include "../View/UI_Start.h"
 
 #include <iostream>
+#include <string>
+
 
 class Signup {
 
@@ -14,6 +16,6 @@ public:
 	std::wstring confirmPassword;
 
 public:
-	void signupButtonClick();
+	void signupButtonClick(std::wstring& e_first);
 	void menuButtonClick();
 };

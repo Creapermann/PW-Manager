@@ -12,7 +12,7 @@
 /// <summary>
 /// Trys to login the user based on the provided data
 /// </summary>
-void Login::loginButtonClick()
+void Login::loginButtonClick(std::wstring& e_first)
 {
 	// Early enter
 	/*Menu menu;
@@ -21,7 +21,7 @@ void Login::loginButtonClick()
 
 	//return;
 
-	if (email.size() > 4 && password.size() >= 6)
+	if (email.size() > 0 && password.size() > 0)
 	{
 		DatabaseManager dbm;
 
@@ -48,13 +48,17 @@ void Login::loginButtonClick()
 			else
 			{
 				DatabaseManager::selectedInfo.clear();
-				//TODO: Password wrong error handling
+				
+				e_first = L"The provied password is wrong!";
+				return;
 			}
 		}
 		else
 		{
 			DatabaseManager::selectedInfo.clear();
-			//TODO: Email wrong error handling
+			
+			e_first = L"The provied email is wrong!";
+			return;
 		}
 	}
 }

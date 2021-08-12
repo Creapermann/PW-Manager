@@ -4,11 +4,17 @@
 #include "../Shared.h"
 
 
+#include <string>
+
+
 
 void showLoginWindow()
 {
 	Login login;
 
+
+	// Error-Handling
+	std::wstring e_first;
 
 	// Components
 	ftxui::ButtonOption menuButtonOption;
@@ -17,7 +23,7 @@ void showLoginWindow()
 
 	ftxui::ButtonOption loginButtonOption;
 	loginButtonOption.border = true;
-	auto loginButton = ftxui::Button("Login", [&] {login.loginButtonClick(); }, loginButtonOption);
+	auto loginButton = ftxui::Button("Login", [&] {login.loginButtonClick(e_first); }, loginButtonOption);
 
 
 	ftxui::Component emailInput = ftxui::Input(&login.email, "someone@example.com");
@@ -67,6 +73,9 @@ void showLoginWindow()
 							ftxui::text(L"Password:  "),
 							passwordInput->Render() /* | ftxui::bgcolor(ftxui::Color::White) */
 						) | ftxui::border | ftxui::color(ftxui::Color::White),
+
+						ftxui::text(L" " + e_first) | ftxui::color(ftxui::Color::Red),
+
 						ftxui::hbox(
 							loginButton->Render()
 						) | ftxui::center | ftxui::color(ftxui::Color::White)
@@ -80,7 +89,7 @@ void showLoginWindow()
 						(
 							menuButton->Render()
 						)
-					) | ftxui::yflex
+					)
 				);
 		});
 	screen.Loop(renderer);
