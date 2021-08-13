@@ -9,20 +9,107 @@
 #include "../Shared.h"
 
 
+#include <algorithm>
+#include <string>
+#include <string_view>
+
+
+std::vector<std::wstring> sortVault(std::wstring str, std::vector<std::wstring>& vec)
+{
+	// Get default order when search filed empty
+	if (str.empty())
+	{
+		Menu menu;
+		vec = menu.getUserNotes();
+
+		return vec;
+	}
+
+	// conv str to lower
+	std::transform(str.begin(), str.end(), str.begin(), [](unsigned char c) { return std::tolower(c); });
+
+
+	std::unordered_map<std::wstring, int> map;
+
+	// Every element in the vector
+	for (int i = 0; i < vec.size(); ++i)
+	{
+		std::wstring lowerTemp;
+		for (unsigned char c : vec[i]) lowerTemp += std::tolower(c);   // Convert to temp lower-case
+
+		// If its exactly the string, set it to the highest prio and skip this loop
+		if (lowerTemp == str)
+		{
+			map.insert({ vec[i], 100 });
+			continue;
+		}
+
+		// Compare starting letter match from every vector elem. and string
+		int temp = 0;
+		for (int j = 0; j < str.size(); ++j)
+		{
+			if (lowerTemp[j] == str[j])
+			{
+				++temp;
+			}
+			else
+			{
+				break;
+			}
+		}
+
+		// Check for substring
+		for (int k = str.length(); k > 0; --k)
+		{
+			if (lowerTemp.find(str.substr(0, k)) != std::string::npos)
+			{
+				temp += k;
+			}
+		}
+
+		map.insert({ vec[i], temp });
+	}
+
+	std::sort(vec.begin(), vec.end(), [&](auto first, auto second)
+		{
+			if (map.at(first) != map.at(second))
+			{
+				return (map.at(first) > map.at(second));
+			}
+			else
+			{
+				return (first < second);
+			}
+		});
+
+	return vec;
+}
+
 
 void showMenuWindow()
 {
 	Menu menu;
 
+	// Contains the currently owned notes of the user
+	int selected = 0;
+	std::vector<std::wstring> entries = menu.getUserNotes();
+
+	ftxui::MenuOption vaultMenuOption;
+	vaultMenuOption.on_enter = [&]() { showEditNoteWindow(menu.userNotes[selected]); };
+	auto vaultMenu = ftxui::Menu(&entries, &selected, vaultMenuOption);
+
 	std::wstring e_first;
 
 	
-	int size{ 60 };
+	int { 60 };
+
+
+
 
 	// Components
 	std::wstring searchStr;
 	ftxui::InputOption searchInputOption;
-	searchInputOption.on_change = [&]() { ; };
+	searchInputOption.on_change = [&]() { entries = sortVault(searchStr, entries); };
 	auto searchInput = ftxui::Input(&searchStr, L"...", searchInputOption);
 
 
@@ -51,15 +138,6 @@ void showMenuWindow()
 	auto uppercaseCheckBox = ftxui::Checkbox(L"include uppercase (e.g. ABCD)", &menu.uppercaseLetters);
 	auto numbersCheckBox = ftxui::Checkbox(L"include numbers   (e.g. 1234)", &menu.includeNumbers);
 	auto symbolsCheckBox = ftxui::Checkbox(L"include symbols   (e.g. @#$%)", &menu.includeSymbols);
-
-
-	// Contains the currently owned notes of the user
-	int selected = 0;
-	std::vector<std::wstring> entries = menu.getUserNotes();
-
-	ftxui::MenuOption vaultMenuOption;
-	vaultMenuOption.on_enter = [&]() { showEditNoteWindow(menu.userNotes[selected]); };
-	auto vaultMenu = ftxui::Menu(&entries, &selected, vaultMenuOption);
 
 	// Container
 	auto container = ftxui::Container::Vertical({
@@ -94,16 +172,17 @@ void showMenuWindow()
 							newNoteButton->Render()
 						),
 
-						// Separator
 						ftxui::separator(),
 
 						ftxui::window
 						(
-							"A",
-							searchInput->Render(),
+							ftxui::text(L"search") | ftxui::hcenter,
+							searchInput->Render()
 						),
 
-						ftxui::separator() |ftxui::color(ftxui::Color::GrayDark),
+						
+						ftxui::separator() | ftxui::color(ftxui::Color::GrayDark),
+
 
 						// Notes menu
 						vaultMenu->Render() | ftxui::frame | ftxui::size(ftxui::Direction::HEIGHT, ftxui::Constraint::LESS_THAN, 30)
