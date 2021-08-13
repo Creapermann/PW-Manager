@@ -5,4 +5,7 @@
 #include "../Model/ProgramInfo.h"
 
 
+#include <string>
+
+
 void showMenuWindow();

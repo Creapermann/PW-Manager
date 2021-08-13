@@ -30,9 +30,9 @@ public:
 public:
 	std::vector<Note> userNotes;
 
-	void generatePassword();
+	void generatePassword(std::wstring& e_first);
 	void copyPasswordToClipboard();
 	
-	void createNewNote();
+	void createNewNote(std::wstring& e_first);
 	std::vector<std::wstring> getUserNotes();
 };

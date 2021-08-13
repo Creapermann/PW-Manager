@@ -2,11 +2,15 @@
 #include "../ViewModel/Menu.h"
 
 
+#include <string>
+
 extern ftxui::ScreenInteractive screen;
 
 void showAddNoteWindow()
 {	
 	Menu menu;
+
+	std::wstring e_first;
 
 	auto titleInput = ftxui::Input(&menu.newNoteTitle, "Title");
 	auto usernameInput = ftxui::Input(&menu.newNoteUsername,"Username");
@@ -16,7 +20,7 @@ void showAddNoteWindow()
 
 	ftxui::ButtonOption addButtonOption;
 	addButtonOption.border = true;
-	auto addButton = ftxui::Button("Add New Note", [&] {menu.createNewNote(); showMenuWindow(); }, addButtonOption);
+	auto addButton = ftxui::Button("Add New Note", [&] { menu.createNewNote(e_first); }, addButtonOption);
 	
 	ftxui::ButtonOption quitButtonOption;
 	quitButtonOption.border = true;
@@ -69,9 +73,15 @@ void showAddNoteWindow()
 					ftxui::hbox(
 						ftxui::text(L"Description:  "),  
 						descriptionInput->Render()
-					) | ftxui::border | ftxui::color(ftxui::Color::White)
+					) | ftxui::border | ftxui::color(ftxui::Color::White),
+
+					ftxui::text(L""),
+					ftxui::text(L" " + e_first) | ftxui::color(ftxui::Color::Red)
 
 				) | ftxui::border | ftxui::color(ftxui::Color::GrayDark) | ftxui::size(ftxui::HEIGHT, ftxui::GREATER_THAN, 15),
+
+				ftxui::text(L""),
+
 				ftxui::vbox(
 					ftxui::hbox(
 						addButton->Render()

@@ -13,10 +13,19 @@
 void showMenuWindow()
 {
 	Menu menu;
+
+	std::wstring e_first;
+
 	
 	int size{ 60 };
 
 	// Components
+	std::wstring searchStr;
+	ftxui::InputOption searchInputOption;
+	searchInputOption.on_change = [&]() { ; };
+	auto searchInput = ftxui::Input(&searchStr, L"...", searchInputOption);
+
+
 	ftxui::ButtonOption settingsButtonOption;
 	settingsButtonOption.border = false;
 	auto settingsButton = ftxui::Button("(settings)", showMenuSettingsWindow, settingsButtonOption);
@@ -27,7 +36,7 @@ void showMenuWindow()
 
 	ftxui::ButtonOption generatePwButtonOption;
 	generatePwButtonOption.border = false;
-	auto generatePasswordButton = ftxui::Button(L"Generate", [&] { menu.generatePassword(); }, generatePwButtonOption);
+	auto generatePasswordButton = ftxui::Button(L"Generate", [&] { menu.generatePassword(e_first); }, generatePwButtonOption);
 
 	ftxui::ButtonOption copyPwButtonOption;
 	copyPwButtonOption.border = false;
@@ -55,6 +64,7 @@ void showMenuWindow()
 	// Container
 	auto container = ftxui::Container::Vertical({
 			newNoteButton,
+			searchInput,
 			vaultMenu,
 			settingsButton,
 			passwordLengthInput,
@@ -87,8 +97,16 @@ void showMenuWindow()
 						// Separator
 						ftxui::separator(),
 
+						ftxui::window
+						(
+							"A",
+							searchInput->Render(),
+						),
+
+						ftxui::separator() |ftxui::color(ftxui::Color::GrayDark),
+
 						// Notes menu
-						vaultMenu->Render()
+						vaultMenu->Render() | ftxui::frame | ftxui::size(ftxui::Direction::HEIGHT, ftxui::Constraint::LESS_THAN, 30)
 
 					) | ftxui::border | ftxui::size(ftxui::WIDTH, ftxui::GREATER_THAN, 65),
 
@@ -140,6 +158,7 @@ void showMenuWindow()
 								generatePasswordButton->Render() | ftxui::border | ftxui::size(ftxui::WIDTH, ftxui::LESS_THAN, 8),
 
 
+								ftxui::text(L" " + e_first) | ftxui::color(ftxui::Color::Red),
 
 								ftxui::separator() | ftxui::color(ftxui::Color::GrayDark),
 

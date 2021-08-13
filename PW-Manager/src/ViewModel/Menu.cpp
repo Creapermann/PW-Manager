@@ -1,4 +1,5 @@
 #include "Menu.h"
+#include "../View/UI_AddNote.h"
 
 #include "../Model/DatabaseManager.h"
 #include "../Model/User.h"
@@ -19,8 +20,10 @@
 /// <summary>
 /// Generates a random password based on certain settings
 /// </summary>
-void Menu::generatePassword()
+void Menu::generatePassword(std::wstring& e_first)
 {
+	e_first = L"";
+
 	// Converts from wstring to int
 	std::stringstream ss(std::string(generatedPasswordLength.begin(), generatedPasswordLength.end()));
 	int length;
@@ -29,9 +32,15 @@ void Menu::generatePassword()
 
 
 	// Error handling
-	if (length <= 0 || length >= 100)
+	if (length >= 1001)
 	{
-		//TODO: Error handling password to long
+		e_first = L"The length must not exceed 1000";
+		return;
+	}
+
+	if (length <= 0)
+	{
+		e_first = L"The length must be at least 1";
 		return;
 	}
 
@@ -136,12 +145,12 @@ void Menu::generatePassword()
 /// <summary>
 /// Creates a new note
 /// </summary>
-void Menu::createNewNote()
+void Menu::createNewNote(std::wstring& e_first)
 {
 	// Error Handling
-	if (newNotePassword == L"" || newNoteTitle == L"")
+	if (newNoteTitle == L"")
 	{
-		// TODO: Not all needed data was provided
+		e_first = L"You need to provide a title";
 		return;
 	}
 	
@@ -155,7 +164,10 @@ void Menu::createNewNote()
 	dbm.selectFromTable(query);
 
 	if (!DatabaseManager::selectedInfo.empty())
+	{
+		e_first = L"A note with this title already exists";
 		return;
+	}
 
 	DatabaseManager::selectedInfo.clear();
 
@@ -188,12 +200,14 @@ void Menu::createNewNote()
 	}
 	else
 	{
-		// Error Handling note with the same name does already exist
+		e_first = L"Unknown error!";
+		return;
 	}
 
 	
 
 	DatabaseManager::selectedInfo.clear();
+	showMenuWindow();
 }
 
 

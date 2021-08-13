@@ -120,7 +120,7 @@ void showEditNoteWindow(Note& note)
 						) | ftxui::border | ftxui::color(ftxui::Color::White),
 
 						ftxui::text(" "),
-						ftxui::text(" Warning: All the changes you apply are irreversible!") | ftxui::color(ftxui::Color::Red),
+						ftxui::text(" Warning: All the changes you apply are irreversible!") | ftxui::color(ftxui::Color::Yellow),
 						ftxui::text(" ")
 
 					) | ftxui::border | ftxui::color(ftxui::Color::GrayDark),
