@@ -11,7 +11,7 @@
 
 #include <algorithm>
 #include <string>
-#include <string_view>
+#include <string_view>	
 
 
 std::vector<std::wstring> sortVault(std::wstring str, std::vector<std::wstring>& vec)
@@ -21,14 +21,13 @@ std::vector<std::wstring> sortVault(std::wstring str, std::vector<std::wstring>&
 	{
 		Menu menu;
 		vec = menu.getUserNotes();
-
 		return vec;
 	}
 
 	// conv str to lower
 	std::transform(str.begin(), str.end(), str.begin(), [](unsigned char c) { return std::tolower(c); });
 
-
+	
 	std::unordered_map<std::wstring, int> map;
 
 	// Every element in the vector
@@ -70,6 +69,7 @@ std::vector<std::wstring> sortVault(std::wstring str, std::vector<std::wstring>&
 		map.insert({ vec[i], temp });
 	}
 
+	// Sort after map numbers
 	std::sort(vec.begin(), vec.end(), [&](auto first, auto second)
 		{
 			if (map.at(first) != map.at(second))
