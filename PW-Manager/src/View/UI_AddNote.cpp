@@ -26,6 +26,7 @@ void showAddNoteWindow()
 	quitButtonOption.border = true;
 	auto quitButton = ftxui::Button("Cancel", showMenuWindow, quitButtonOption);
 
+
 	auto container = ftxui::Container::Vertical({
 		titleInput,
 		usernameInput,
@@ -92,6 +93,7 @@ void showAddNoteWindow()
 				)
 			);
 		});
+
 
 	screen.Loop(renderer);
 }
