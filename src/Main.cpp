@@ -13,7 +13,7 @@ int main()
 	std::filesystem::create_directories(dbm.folderName);
 	dbm.initDB(dbm.path);
 
-	//// Shows the startwindow which lets the user login or register
+	// Shows the startwindow which lets the user login or register
 	showStartWindow();
 
 	return 0;

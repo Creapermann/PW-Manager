@@ -11,6 +11,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_subdirectory(libs/FTXUI)
 add_subdirectory(libs/clip)
+add_subdirectory(libs/sqlite3)
 
                   
                   
@@ -21,6 +22,7 @@ add_executable(app src/Main.cpp
                    src/Model/CopyToClipboard.cpp
                    src/Model/CopyToClipboard.h
                    src/Model/DatabaseManager.h
+                   src/Model/DatabaseManager.cpp
                    src/Model/FtxuiIncludes.h
                    src/Model/Note.cpp
                    src/Model/Note.h
@@ -57,24 +59,30 @@ add_executable(app src/Main.cpp
                    src/ViewModel/Signup.cpp
                    src/ViewModel/Signup.h
     )
-               
+
+
 target_include_directories(app 
-                           # OWN
-                           PRIVATE src/
-                           PRIVATE src/View
-                           PRIVATE src/Model
-                           PRIVATE src/ViewModel
-    
-                           # FTXUI
-                           PRIVATE inc/FTXUI/component
-                           PRIVATE inc/FTXUI/dom
-                           PRIVATE inc/FTXUI/screen
-                           PRIVATE inc/FTXUI/util
-                           
-                           # CLIP
-                           PRIVATE inc/clip)
-               
-target_link_libraries(app 
+                               # OWN
+                               PRIVATE src/
+                               PRIVATE src/View
+                               PRIVATE src/Model
+                               PRIVATE src/ViewModel
+                               
+                               # FTXUI
+                               PRIVATE inc/FTXUI/component
+                               PRIVATE inc/FTXUI/dom
+                               PRIVATE inc/FTXUI/screen
+                               PRIVATE inc/FTXUI/util
+                               
+                               # CLIP
+                               PRIVATE inc/clip
+                               
+                               # SQLITE
+                               PRIVATE inc/sqlite
+    )
+
+
+target_link_libraries(app
                           # FTXUI
                           screen
                           dom
@@ -83,5 +91,6 @@ target_link_libraries(app
                           # CLIP
                           clip
                           
-                          # SQL
-                          )
+                          # SQLITE
+                          sqlite
+    )

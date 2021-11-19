@@ -3,9 +3,9 @@
 #include "UI_Login.h"
 #include "UI_Signup.h"
 #include "UI_Credits.h"
-
 #include "Shared.h"
 
+#include <exception>
 
 
 
@@ -27,7 +27,9 @@ void showStartWindow() {
     int selected = 0;
     
     // Menu
+    bool quit_app = false;
     ftxui::MenuOption option;
+    
     option.on_enter = [&]
     {
         switch (selected)
@@ -40,11 +42,11 @@ void showStartWindow() {
             break;
         case 2:
             screen.ExitLoopClosure();
-            _Exit(0);
+            quit_app = true;
             break;
         }
     };
-
+    
     option.style_focused = ftxui::bgcolor(ftxui::Color::Blue);
 
     auto menu = ftxui::Menu(&entries, &selected, option);
@@ -67,7 +69,7 @@ void showStartWindow() {
                 ftxui::flex | ftxui::bold | ftxui::color(ftxui::Color::Green) | ftxui::center,
 
                 // Version
-                ftxui::text(L"v_" + std::wstring(pInfo::version.begin(), pInfo::version.end()))
+                ftxui::text(L"v_" + std::wstring(pInfo::version.begin(), pInfo::version.end())) | ftxui::align_right
 
             ) | ftxui::border,
 
