@@ -27,7 +27,6 @@ void showStartWindow() {
     int selected = 0;
     
     // Menu
-    bool quit_app = false;
     ftxui::MenuOption option;
     
     option.on_enter = [&]
@@ -42,7 +41,7 @@ void showStartWindow() {
             break;
         case 2:
             screen.ExitLoopClosure();
-            quit_app = true;
+            std::terminate();
             break;
         }
     };
