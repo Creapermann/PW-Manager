@@ -1,7 +1,7 @@
 #pragma once
 
 #include "FtxuiIncludes.h"
-#include "sqlite3.h"
+#include "sqlite3.hpp"
 
 
 
