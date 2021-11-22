@@ -11,7 +11,6 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_subdirectory(libs/FTXUI)
 add_subdirectory(libs/clip)
-add_subdirectory(libs/sqlite3)
 
                   
                   
@@ -92,5 +91,5 @@ target_link_libraries(app
                           clip
                           
                           # SQLITE
-                          sqlite
+                          ${PROJECT_SOURCE_DIR}/libs/sqlite3/libsqlite.so
     )
